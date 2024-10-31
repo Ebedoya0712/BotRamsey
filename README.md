@@ -1,6 +1,6 @@
 # BotRamsey: Un Bot de Recomendación de Recetas
 
-![Logo del Proyecto](![Uploading image.png…]())
+(https://files.oaiusercontent.com/file-iAn1OhMRlrBZZ5OTrWBO7TkX?se=2024-10-31T22%3A38%3A12Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4e3699ee-412f-4293-96a7-153166e271e2.webp&sig=SGHSZyweRSA6tB4SWxDN7kMT18JEV61iYZFMSIOTQJU%3D)
 
 ## Objetivo del Proyecto
 El objetivo de este proyecto es crear un sistema que permita a los usuarios encontrar recetas de cocina que se puedan realizar en un tiempo específico. Las recetas estarán organizadas por ingredientes y dificultad, y se clasificarán según los tiempos parciales de preparación, cocción y armado, así como el tiempo total requerido.
