@@ -1,7 +1,7 @@
 # BotRamsey: Un Bot de Recomendación de Recetas
 
 
-![BotRamsey](https://github.com/Joanaa789/BotRamsey/blob/831939889c5856dae5dcdf53bcc1325326a0ccb8/DALL%C2%B7E%202024-10-31%2018.40.54%20-%20A%20highly%20detailed%20and%20realistic%20image%20of%20Gordon%20Ramsay%20with%20half%20of%20his%20face%20as%20a%20robot.%20The%20robotic%20half%20includes%20metallic%20features%2C%20LED%20lights%2C%20and%20.webp).
+![BotRamsey](https://github.com/Joanaa789/BotRamsey/blob/831939889c5856dae5dcdf53bcc1325326a0ccb8/DALL%C2%B7E%202024-10-31%2018.40.54%20-%20A%20highly%20detailed%20and%20realistic%20image%20of%20Gordon%20Ramsay%20with%20half%20of%20his%20face%20as%20a%20robot.%20The%20robotic%20half%20includes%20metallic%20features%2C%20LED%20lights%2C%20and%20.webp)
 
 ## Objetivo del Proyecto
 El objetivo de este proyecto es crear un sistema que permita a los usuarios encontrar recetas de cocina que se puedan realizar en un tiempo específico. Las recetas estarán organizadas por ingredientes y dificultad, y se clasificarán según los tiempos parciales de preparación, cocción y armado, así como el tiempo total requerido.
