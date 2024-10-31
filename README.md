@@ -1,4 +1,4 @@
-# Recetas a Tiempo: Un Bot de Recomendación de Recetas
+# BotRamsey: Un Bot de Recomendación de Recetas
 
 ## Objetivo del Proyecto
 El objetivo de este proyecto es crear un sistema que permita a los usuarios encontrar recetas de cocina que se puedan realizar en un tiempo específico. Las recetas estarán organizadas por ingredientes y dificultad, y se clasificarán según los tiempos parciales de preparación, cocción y armado, así como el tiempo total requerido.
