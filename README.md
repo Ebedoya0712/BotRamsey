@@ -55,6 +55,3 @@ Para la recopilación de datos, se utilizará web scraping de sitios de recetas 
 
 ## Conclusión
 Este proyecto tiene el potencial de ofrecer una solución innovadora para personas con agendas ajustadas, facilitando la experiencia culinaria y reduciendo la barrera del tiempo en la cocina. ¡Esperamos que disfrutes usando el bot y descubras nuevas recetas que se adapten a tu estilo de vida!
-
-## Contribuciones
-¡Las contribuciones son bienvenidas! Si deseas colaborar en este proyecto, por favor abre un issue o envía un pull request.
