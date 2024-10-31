@@ -1,6 +1,7 @@
 # BotRamsey: Un Bot de Recomendación de Recetas
 
 
+![BotRamsey](DALL·E 2024-10-31 18.40.54 - A highly detailed and realistic image of Gordon Ramsay with half of his face as a robot. The robotic half includes metallic features, LED lights, and .webp).
 
 ## Objetivo del Proyecto
 El objetivo de este proyecto es crear un sistema que permita a los usuarios encontrar recetas de cocina que se puedan realizar en un tiempo específico. Las recetas estarán organizadas por ingredientes y dificultad, y se clasificarán según los tiempos parciales de preparación, cocción y armado, así como el tiempo total requerido.
