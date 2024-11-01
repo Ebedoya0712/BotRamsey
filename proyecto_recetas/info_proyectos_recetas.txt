@@ -1,0 +1,9 @@
+Descripción del Proyecto
+Este proyecto tiene como objetivo desarrollar una aplicación que permita a los usuarios encontrar recetas según ingredientes disponibles, tiempo, y dificultad.
+
+Estructura de Carpetas
+
+data/: Almacena los datos obtenidos mediante scraping y datos intermedios.
+src/: Código fuente organizado por módulos (scraping, limpieza, modelos).
+notebooks/: Notebooks de Jupyter para exploración y análisis de datos.
+main.py: Archivo principal de la aplicación en Streamlit, donde se configura la interfaz de usuario.

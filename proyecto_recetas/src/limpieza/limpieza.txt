@@ -1,0 +1,6 @@
+Propósito
+Esta carpeta contiene los scripts para la limpieza y normalización de datos.
+
+Archivos sugeridos
+
+procesar_datos.py: Funciones para transformar, normalizar y categorizar los datos extraídos

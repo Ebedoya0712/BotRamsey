@@ -1,0 +1,6 @@
+Propósito
+Scripts de modelos de machine learning utilizados para recomendaciones y predicciones.
+
+Archivos sugeridos
+
+modelo_recomendador.py: Un modelo de recomendación basado en los ingredientes y el tiempo disponible para el usuario.

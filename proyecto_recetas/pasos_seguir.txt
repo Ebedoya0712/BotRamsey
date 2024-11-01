@@ -1,0 +1,33 @@
+aqui se explica los pasos que debes seguir para poder trabajar bien en el proyecto para comenzar
+
+
+1er paso: abre una terminal cualquiera puede ser cmd o la terminal de git 
+y ejecuta el siguiente comando: 
+
+python -m venv botramsey_env
+
+este comando es para crear un entorno virtual en python y asi no tengan
+problemas a descargar las librerias de python que vamos a usar
+
+
+2do paso: Activa el entorno virtual
+
+Si tienes Windows: 
+
+botramsey_env\Scripts\activate
+
+
+si tienes macOS oh Linux:
+
+source botramsey_env/bin/activate
+
+
+3er paso: despues de haber realizado los 2 pasos anteriores
+ejecutar el siguiente comando para descargar todas las librerias:
+
+
+pip install -r requirements.txt
+
+
+Fin :D
+

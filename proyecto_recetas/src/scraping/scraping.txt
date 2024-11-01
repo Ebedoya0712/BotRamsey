@@ -1,0 +1,6 @@
+Propósito
+Almacena los scripts para el web scraping de sitios de recetas.
+
+Archivos sugeridos
+
+scraper.py: Contiene funciones para extraer información de sitios web de recetas como AllRecipes, Tasty, etc.
