@@ -29,5 +29,26 @@ ejecutar el siguiente comando para descargar todas las librerias:
 pip install -r requirements.txt
 
 
+5to paso: despues de descargar todas las librerias ah usar,
+ejecuta el siguiente comando:
+
+
+streamlit run proyecto_recetas/main.py
+
+
+este comando hara que corras la interfaz de streamlit
+
+
+6to paso: al correr la interfaz de streamlit en la terminal te va 
+aparecer una url la cual son estas: 
+
+Local URL: http://localhost:8501
+  Network URL: http://192.168.1.111:8501
+
+  se debe ingresar solo a esta url: http://localhost:8501
+
+  para poder ver la interfaz
+
+
 Fin :D
 
