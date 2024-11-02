@@ -4,7 +4,7 @@ import streamlit as st
 import time
 
 
-def principal():
+def main():
     # Configurar la página de la aplicación con título y diseño centrado
     st.set_page_config(page_title="BotRamsey", layout="centered")
     st.title("Bienvenido a BotRamsey")
@@ -137,4 +137,4 @@ def temporizador(minutos):
 
 
 if __name__ == "__main__":
-    principal()
+    main()
