@@ -39,7 +39,7 @@ def chat():
                 respuesta = buscar_receta(mensaje)
                 st.session_state.mensajes.append({"role": "assistant", "content": respuesta})
                 st.button("Ver Preparación", key="preparar")
-        except:
+        except AttributeError:
             st.subheader("Lamentablemente no dispongo de esa receta")
 
     elif st.session_state['cronometro']:
