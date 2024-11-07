@@ -1,0 +1,93 @@
+{
+    "Receta de Sopa de menestr\u00f3n": {
+        "ingredientes": [
+            "1 kilogramo de pecho o punta de pecho de res",
+            "3 papa blanca",
+            "2 choclos en rodajas",
+            "150 gramos de fideo macarr\u00f3n o canuto",
+            "1 trozo de zapallo",
+            "150 gramos de habas peladas",
+            "1 cebolla",
+            "3 dientes de ajo",
+            "100 gramos de espinaca",
+            "\u00bd pu\u00f1ado de albahaca",
+            "sal al gusto"
+        ],
+        "Duracion": "1h 30m",
+        "Dificultad": "media"
+    },
+    "Receta de Arepa de queso": {
+        "ingredientes": [
+            "masa",
+            "2 tazas de agua                                                                    (480 mililitros)",
+            "2 tazas de harina precocida de maiz",
+            "1 cucharada sopera de mantequilla (opcional)",
+            "250 gramos de queso semi blando fresco",
+            "100 gramos de queso duro fresco",
+            "125 mililitros de agua adicional",
+            "relleno",
+            "350 gramos de queso para fundir (opcional)"
+        ],
+        "Duracion": "45m",
+        "Dificultad": "baja"
+    },
+    "Receta de Pollo con panko": {
+        "ingredientes": [
+            "500 gramos de filete de pechuga de pollo",
+            "2 dientes de ajo",
+            "1 cucharada postre de sal",
+            "1 pizca de pimienta negra",
+            "1 taza de harina de trigo                                                                    (140 gramos)",
+            "1 huevo",
+            "1 taza de harina panko",
+            "500 mililitros de aceite"
+        ],
+        "Duracion": "30m",
+        "Dificultad": "baja"
+    },
+    "Receta de Cachapas venezolanas": {
+        "ingredientes": [
+            "2 tazas de ma\u00edz desgranado",
+            "1 taza de agua o leche",
+            "2 cucharadas soperas de mantequilla",
+            "2 huevo (opcional)",
+            "4 cucharadas soperas de az\u00facar",
+            "1 cucharadita de sal",
+            "4 cucharadas soperas de harina de ma\u00edz",
+            "Queso de mano o mozzarella (opcional)"
+        ],
+        "Duracion": "30m",
+        "Dificultad": "baja"
+    },
+    "Receta de Caramelo para quesillo": {
+        "ingredientes": [
+            "200 gramos de az\u00facar                                                                    (1 taza)",
+            "200 mililitros de agua"
+        ],
+        "Duracion": "30m",
+        "Dificultad": "baja"
+    },
+    "Receta de Chocotorta helada": {
+        "ingredientes": [
+            "600 gramos de galletitas de chocolate",
+            "600 gramos de queso crema",
+            "400 gramos de dulce de leche",
+            "1 vaso de leche",
+            "1 cucharada sopera de cacao dulce"
+        ],
+        "Duracion": "30m",
+        "Dificultad": "muy baja"
+    },
+    "Receta de Pur\u00e9 de papa colombiano": {
+        "ingredientes": [
+            "6 Patatas grandes",
+            "1 paquete de Salchichas",
+            "1 bote de Mayonesa",
+            "1 botella de Leche",
+            "1 pizca de Sal",
+            "1 paquete de Crema de leche"
+        ],
+        "Duracion": "30m",
+        "Dificultad": "baja"
+    }
+}

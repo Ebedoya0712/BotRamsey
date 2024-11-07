@@ -25,12 +25,32 @@ def obtener_receta(enlace):
     st.write("\n\n".join(ingredientes))
     
 
-def obtener_contenido(enlace):
-    # Realizar una solicitud HTTP para obtener el contenido HTML de la página
-    respuesta = requests.get(enlace)
-    contenido = respuesta.text
-    sopa = BeautifulSoup(contenido, 'lxml')
-    return sopa
+def obtener_contenido(url):
+    import requests
+    from bs4 import BeautifulSoup
+
+    response = requests.get(url)
+    if response.status_code == 200:
+        return BeautifulSoup(response.text, 'html.parser')
+    return None
+
+def guardar_datos(titulo, propiedades, ingredientes):
+    session_state = streamlit.session_state
+    if "Base" not in session_state:
+        session_state.Base = {}
+
+    receta = {
+        "ingredientes": [ingrediente.strip() for ingrediente in ingredientes]
+    }
+    
+    # Filtrar duración y dificultad por separado
+    duracion = next((prop for prop in propiedades if "minutos" in prop), None)
+    dificultad = next((prop.replace("Dificultad ", "").strip() for prop in propiedades if "Dificultad" in prop), None)
+
+    receta["Duracion"] = duracion
+    receta["Dificultad"] = dificultad
+
+    session_state.Base[titulo] = receta
 
 
 def mostrar_pasos(enlace):
@@ -54,15 +74,21 @@ def mostrar_pasos(enlace):
 
 
 def buscar_receta(busqueda):
-    # Buscar recetas en la web y obtener el primer enlace
     busqueda = busqueda.replace(" ", "+")
     enlace_web = f"https://www.recetasgratis.net/busqueda?q={busqueda}"
     sopa = obtener_contenido(enlace_web)
+    
+    # Pausa entre solicitudes para evitar bloqueos
+    time.sleep(1)
+    
     resultado = sopa.find('div', class_='resultado link')
     enlace = resultado.find('a')
-    obtener_receta(enlace.get('href'))
-
-    return enlace.get('href')
+    if enlace:
+        obtener_receta(enlace.get('href'))
+        return enlace.get('href')
+    else:
+        print("No se encontró un enlace para la receta.")
+        return None
 
 def temporizador(minutos):
     # Temporizador que cuenta hacia atrás
