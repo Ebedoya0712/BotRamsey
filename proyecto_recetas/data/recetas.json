@@ -1,4 +1,22 @@
 {
+    "Receta de Muffins de chocolate con pepitas de chocolate": {
+        "ingredientes": [
+            "1 taza de Harina de trigo                                                                    (140 gramos)",
+            "½ taza de Agua caliente",
+            "1 unidad de Huevo",
+            "2 cucharadas soperas de Azúcar",
+            "2 cucharadas soperas de Miel",
+            "3 cucharadas soperas de Cacao o chocolate en polvo",
+            "1 cucharada sopera de Mantequilla o margarina ablandada",
+            "1 cucharadita de Bicarbonato de sodio",
+            "1 cucharadita de Polvo de hornear o levadura química",
+            "1 cucharadita de Esencia de vainilla (opcional)",
+            "Pepitas de chocolate"
+        ],
+        "valoracion": "80.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja"
+    },
     "Receta de Arepa de queso": {
         "ingredientes": [
             "masa",
@@ -11,51 +29,71 @@
             "relleno",
             "350 gramos de queso para fundir (opcional)"
         ],
+        "valoracion": "90.00%",
         "Duracion": "45m",
+        "Dificultad": "baja"
+    },
+    "Receta de Romanescu con jamón": {
+        "ingredientes": [
+            "1 romanescu",
+            "1 cebolla",
+            "100 gramos de jamón serrano",
+            "1 chorro de aceite de oliva",
+            "1 pizca de sal",
+            "1 pizca de pimienta"
+        ],
+        "valoracion": "90.00%",
+        "Duracion": "30m",
         "Dificultad": "baja"
     },
     "Receta de Chipa de queso": {
         "ingredientes": [
-            "500 gramos de f\u00e9cula de mandioca",
+            "500 gramos de fécula de mandioca",
             "120 gramos de queso pategras",
             "120 gramos de queso sardo",
             "2 huevos",
             "1 cucharada postre de sal (opcional)",
             "1 cucharada postre de nuez moscada (opcional)",
-            "\u00bd cucharada postre de pimienta (opcional)",
+            "½ cucharada postre de pimienta (opcional)",
             "100 mililitros de leche",
             "100 gramos de manteca"
         ],
+        "valoracion": "88.60%",
         "Duracion": "30m",
         "Dificultad": "baja"
     },
-    "Receta de Romanescu con jam\u00f3n": {
+    "Receta de Pollo con panko": {
         "ingredientes": [
-            "1 romanescu",
-            "1 cebolla",
-            "100 gramos de jam\u00f3n serrano",
-            "1 chorro de aceite de oliva",
-            "1 pizca de sal",
-            "1 pizca de pimienta"
+            "500 gramos de filete de pechuga de pollo",
+            "2 dientes de ajo",
+            "1 cucharada postre de sal",
+            "1 pizca de pimienta negra",
+            "1 taza de harina de trigo                                                                    (140 gramos)",
+            "1 huevo",
+            "1 taza de harina panko",
+            "500 mililitros de aceite"
         ],
-        "Duracion": "30m",
-        "Dificultad": "muy baja"
-    },
-    "Receta de Muffins de chocolate con pepitas de chocolate": {
-        "ingredientes": [
-            "1 taza de Harina de trigo                                                                    (140 gramos)",
-            "\u00bd taza de Agua caliente",
-            "1 unidad de Huevo",
-            "2 cucharadas soperas de Az\u00facar",
-            "2 cucharadas soperas de Miel",
-            "3 cucharadas soperas de Cacao o chocolate en polvo",
-            "1 cucharada sopera de Mantequilla o margarina ablandada",
-            "1 cucharadita de Bicarbonato de sodio",
-            "1 cucharadita de Polvo de hornear o levadura qu\u00edmica",
-            "1 cucharadita de Esencia de vainilla (opcional)",
-            "Pepitas de chocolate"
-        ],
+        "valoracion": "100.00%",
         "Duracion": "30m",
         "Dificultad": "baja"
+    },
+    "Receta de Lasaña": {
+        "ingredientes": [
+            "300 mililitros de Salsa bechamel",
+            "12 láminas de Pasta para lasaña",
+            "1 kilogramo de Carne picada (mitad cerdo y mitad ternera)",
+            "1 unidad de Cebolla",
+            "2 dientes de Ajo",
+            "400 gramos de Tomate triturado",
+            "100 gramos de Tomate frito (unas 5 o 6 cucharadas)",
+            "5 cucharadas soperas de Aceite de oliva (unos 50 ml)",
+            "50 gramos de Queso rallado",
+            "1 trozo de Mantequilla para untar en la fuente",
+            "2 litros de Agua",
+            "1 pizca de Sal y Pimienta negra molida"
+        ],
+        "valoracion": "90.00%",
+        "Duracion": "2h 30m",
+        "Dificultad": "media"
     }
 }
