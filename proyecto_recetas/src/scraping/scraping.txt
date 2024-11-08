@@ -1,6 +1,202 @@
-Propósito
-Almacena los scripts para el web scraping de sitios de recetas.
+Este código realiza web scraping de recetas desde el sitio web www.recetasgratis.net y permite guardar, 
+mostrar y administrar recetas en Streamlit. A continuación se explica cada parte del código:
 
-Archivos sugeridos
+1. Importaciones
 
-scraper.py: Contiene funciones para extraer información de sitios web de recetas como AllRecipes, Tasty, etc.
+from bs4 import BeautifulSoup
+import requests
+import streamlit as st
+import time
+import json
+import pandas as pd
+import os
+
+Descripción:
+
+BeautifulSoup y requests se usan para obtener y analizar el contenido HTML de las páginas de recetas.
+streamlit permite crear una interfaz interactiva para visualizar y manipular los datos de las recetas.
+time, json, pandas, y os son librerías auxiliares para manejar tiempo, formatos de datos (JSON y CSV) y manipular 
+archivos en el sistema.
+
+2. Función obtener_receta
+
+def obtener_receta(enlace):
+    sopa = obtener_contenido(enlace)
+    titulo = sopa.find('h1', class_='titulo titulo--articulo').get_text()
+    propiedades = [prop.get_text() for prop in sopa.find('div', class_='properties').find_all('span')]
+    ingredientes = [ing.get_text() for ing in sopa.find('div', class_='ingredientes').find_all('label')]
+
+    guardar_datos(titulo, propiedades, ingredientes)
+
+    st.subheader(titulo)
+    st.write("\n\n".join(propiedades))
+    st.subheader("Lista De Ingredientes")
+    st.write("\n\n".join(ingredientes))
+
+
+Descripción:
+
+Objetivo: Extrae el título, propiedades (duración y dificultad), e ingredientes de la receta desde el enlace proporcionado.
+Funcionamiento:
+Llama a obtener_contenido para extraer el contenido HTML.
+Extrae el título, propiedades y lista de ingredientes de la página.
+Llama a guardar_datos para almacenar esta información en el estado de sesión de Streamlit.
+Muestra el título, propiedades y lista de ingredientes en la interfaz de Streamlit.
+
+3. Función obtener_contenido:
+
+def obtener_contenido(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        return BeautifulSoup(response.text, 'html.parser')
+    return None
+
+Descripción:
+
+Objetivo: Hace una solicitud HTTP a la URL dada y devuelve el contenido HTML si la solicitud es exitosa.
+Funcionamiento:
+Usa requests para obtener el contenido de la URL.
+Si la respuesta es exitosa (status_code 200), devuelve el contenido analizado con BeautifulSoup.
+En caso de fallo, retorna None.
+
+4. Función guardar_datos
+
+def guardar_datos(titulo, propiedades, ingredientes):
+    session_state = st.session_state
+    if "Base" not in session_state:
+        session_state.Base = {}
+
+    receta = {
+        "ingredientes": [ingrediente.strip() for ingrediente in ingredientes]
+    }
+    
+    duracion = next((prop for prop in propiedades if "minutos" in prop), None)
+    dificultad = next((prop.replace("Dificultad ", "").strip() for prop in propiedades if "Dificultad" in prop), None)
+
+    receta["Duracion"] = duracion
+    receta["Dificultad"] = dificultad
+
+    session_state.Base[titulo] = receta
+
+
+Descripción:
+
+Objetivo: Almacena los datos de la receta en el session_state de Streamlit.
+Funcionamiento:
+Crea un diccionario receta con los ingredientes, duración y dificultad de la receta.
+Usa el session_state de Streamlit para almacenar la receta bajo su título en una base de datos en memoria.
+
+5. Función mostrar_pasos
+
+def mostrar_pasos(enlace):
+    sopa = obtener_contenido(enlace)
+    pasos = list(map(lambda x: x.get_text(), sopa.find_all("div", class_="apartado")))
+
+    if st.session_state.paso < len(pasos):
+        st.subheader("Pasos de preparación:")
+        st.write(pasos[st.session_state.paso] + "\n\n")
+
+        if "minuto" in pasos[st.session_state.paso]:
+            indice = pasos[st.session_state.paso].index("minuto") - 2
+            tiempo = pasos[st.session_state.paso][indice]     
+            while pasos[st.session_state.paso][indice - 1].isdigit():
+                tiempo = pasos[st.session_state.paso][indice - 1] + tiempo
+                indice -= 1 
+            st.session_state.tiempo = int(tiempo)
+            st.button("Iniciar cronómetro", key="cronometro")
+
+Descripción:
+
+Objetivo: Muestra los pasos de preparación de la receta y, si el paso menciona "minuto", ofrece la opción de iniciar un cronómetro.
+Funcionamiento:
+Extrae los pasos de preparación.
+Muestra el paso actual en Streamlit.
+Si el paso incluye una duración en minutos, permite iniciar un cronómetro basado en el tiempo estimado de ese paso.
+
+6. Función buscar_receta
+
+def buscar_receta(busqueda):
+    busqueda = busqueda.replace(" ", "+")
+    enlace_web = f"https://www.recetasgratis.net/busqueda?q={busqueda}"
+    sopa = obtener_contenido(enlace_web)
+    time.sleep(1)
+    resultado = sopa.find('div', class_='resultado link')
+    enlace = resultado.find('a')
+    if enlace:
+        obtener_receta(enlace.get('href'))
+        return enlace.get('href')
+    else:
+        print("No se encontró un enlace para la receta.")
+        return None
+
+Descripción:
+
+Objetivo: Busca una receta en el sitio web usando un término de búsqueda.
+Funcionamiento:
+Construye la URL de búsqueda.
+Obtiene la primera receta del resultado de búsqueda y llama a obtener_receta para extraer sus datos.
+
+7. Función temporizador
+
+
+def temporizador(minutos):
+    marcador = st.empty()
+    st.button("Siguiente paso", key="siguiente")
+
+    for i in range(minutos, 0, -1):
+        for j in range(60, 0, -1):
+            with marcador:
+                st.write(f"\rTiempo restante: {i-1} minutos : {j-1} segundos")
+            time.sleep(1)
+
+    st.write("\n¡Tiempo finalizado!")
+
+Descripción:
+
+Objetivo: Temporizador en Streamlit que cuenta hacia atrás, ideal para medir tiempos de preparación.
+Funcionamiento:
+Muestra el tiempo restante en minutos y segundos.
+Actualiza cada segundo hasta que el tiempo se agota.
+
+8. Función guardar_archivos
+
+
+def guardar_archivos(Base):
+    if len(Base) != 0:
+        with open('proyecto_recetas/data/recetas.json', 'w') as f:
+            json.dump(Base, f, indent=4)
+        
+        data = {
+            "Recetas" : list(Base.keys()),
+            "Duracion" : [Base[i]['Duracion'] for i in Base],
+            "Dificultad" : [Base[i]['Dificultad'] for i in Base],
+        }
+
+        df = pd.DataFrame(data)
+        df.to_csv('proyecto_recetas/data/recetas.csv', index=False)
+
+Descripción:
+
+Objetivo: Guarda los datos de las recetas en formato JSON y CSV.
+Funcionamiento:
+Si hay recetas en la base, guarda los datos en recetas.json.
+Convierte los datos a un DataFrame de pandas y lo guarda en recetas.csv.
+
+9. Función cargar_datos
+
+def cargar_datos():
+    if os.path.exists('proyecto_recetas/data/recetas.json'):
+        with open('proyecto_recetas/data/recetas.json', 'r') as f:
+            return json.load(f)
+    else:
+        return {}
+
+
+Descripción:
+
+Objetivo: Carga las recetas guardadas de un archivo JSON.
+Funcionamiento:
+Comprueba si existe recetas.json.
+Si existe, carga y devuelve los datos; si no, devuelve un diccionario vacío.
+
+
