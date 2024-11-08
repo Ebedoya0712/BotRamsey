@@ -1,5 +1,5 @@
 import streamlit as st
-import proyecto_recetas.analisis as analisis
+import analisis
 import src.scraping.scraper as sp  # funciones de scraping de recetas
 
 
