@@ -123,7 +123,7 @@ def guardar_archivos(Base):
     ### Guarda la base de datos en archivos JSON y CSV ### 
     if Base:
         # Guardar JSON
-        with open('proyecto_recetas/data/recetas.json', 'w') as f:
+        with open('proyecto_recetas/data/recetas.json', 'w', encoding='utf-8') as f:
             json.dump(Base, f, indent=4, ensure_ascii=False)
 
         # Guardar CSV
@@ -134,7 +134,7 @@ def guardar_archivos(Base):
             "Valoracion": [receta['Valoracion'] for receta in Base.values()],
             "Tipo": [receta['Tipo'] for receta in Base.values()]
         }
-        pd.DataFrame(data).to_csv('proyecto_recetas/data/recetas.csv', index=False)
+        pd.DataFrame(data).to_csv('proyecto_recetas/data/recetas.csv', index=False, encoding='utf-8')
 
 
 
@@ -142,6 +142,6 @@ def cargar_datos():
     ### Carga los datos desde el archivo JSON si existe ### 
     path = 'proyecto_recetas/data/recetas.json'
     if os.path.exists(path):
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             return json.load(f)
     return {}
