@@ -11,33 +11,26 @@ def graficar():
     clasificacion, df = cargar()
 
     prd.procesar_datos(df)
-
-# Configuración de la interfaz en Streamlit
+    
     st.title('Recetas y Valoración')
 
-# Sidebar para los filtros
     st.sidebar.header('Filtros')
     df = filtros(clasificacion, df)
 
-# Mostrar la tabla de datos de las recetas con la duración formateada
+    # Mostrar la tabla de datos de las recetas 
     st.subheader('Datos de las recetas')
     st.dataframe(df[['Recetas', 'Duracion', 'Dificultad', 'Valoracion', "Tipo"]])
 
     estilo()
 
-# Crear gráficos de línea con fondo negro
     st.title("Análisis de Recetas")
 
-# Gráfico de Duración vs Dificultad
     DurvsDif(df)
 
-# Gráfico de Dificultad vs Valoración
     DifvsVal(df)
 
-# Gráfico de Duración vs Valoración
     DvsV(df)
 
-# Gráfico de barras: comparación de niveles de dificultad
     Barras(df)
 
 def DurvsDif(df):
@@ -71,6 +64,7 @@ def DvsV(df):
     st.pyplot(fig)
 
 def Barras(df):
+    # Gráfico de barras: comparación de niveles de dificultad
     st.subheader("Comparación de Niveles de Dificultad")
     fig, ax = plt.subplots(figsize=(10, 6))
     nivel_counts = df['Dificultad'].value_counts()
@@ -85,7 +79,7 @@ def filtros(clasificacion, df):
     dificultad = st.sidebar.selectbox('Selecciona la dificultad', ['todas', 'alta', 'media', 'baja', 'muy baja'])
     tipo = st.sidebar.selectbox('Selecciona Tipo', ['todas']+list(clasificacion.keys()))
 
-# Filtrar DataFrame por dificultad si se selecciona
+    # Filtrar DataFrame por dificultad y tipo
     if dificultad != 'todas':
         df = df[df['Dificultad'] == dificultad]
 
@@ -94,10 +88,10 @@ def filtros(clasificacion, df):
     return df
 
 def cargar():
+    # cargar datos del csv y el json de clasificaciones
     with open('proyecto_recetas/data/clasificacion.json', 'r') as f:
         clasificacion = json.load(f)
 
-# Datos cargados desde el csv para analizar
     ruta_archivo = 'proyecto_recetas/data/recetas.csv' 
     if os.path.exists(ruta_archivo):
         df = pd.read_csv(ruta_archivo)
@@ -107,11 +101,10 @@ def cargar():
     return clasificacion,df
 
 def estilo():
-# Aplicar el estilo de Seaborn
+# Aplicar el estilo a los graficos
     sns.set_style("darkgrid")
     sns.set_palette("bright")
 
-# Configurar el fondo negro para matplotlib
     plt.rcParams['axes.facecolor'] = 'black'
     plt.rcParams['figure.facecolor'] = 'black'
     plt.rcParams['savefig.facecolor'] = 'black'

@@ -27,20 +27,25 @@ def procesar_datos(df):
     df['Duracion'] = df['Duracion'].apply(procesar_minutos)
     df['Valoracion'] = df['Valoracion'].str.replace('%', '').astype(float)
 
-    # Eliminar filas duplicadas
-    df = df.drop_duplicates()
-
-    # Eliminar filas con valores nulos o vacíos
-    df = df.dropna()
-
-    # Filtrar duración en minutos: solo valores mayores a 0
-    df = df[df['Duracion'] > 0]
-
-    # Filtrar valoración: entre 0 y 100
-    df = df[(df['Valoracion'] >= 0) & (df['Valoracion'] <= 100)]
-
-    # Filtrar dificultad: solo valores válidos
-    df = df[df['Dificultad'].isin(['alta', 'media', 'baja', 'muy baja'])]
+    df = limpiar(df)
 
     Clasificar_Dificultad(df)
+
+
+def limpiar(df):
+    df = df.drop_duplicates()
+
+
+    df = df.dropna()
+
+
+    df = df[df['Duracion'] > 0]
+
+
+    df = df[(df['Valoracion'] >= 0) & (df['Valoracion'] <= 100)]
+
+
+    df = df[df['Dificultad'].isin(['alta', 'media', 'baja', 'muy baja'])]
+
+    return df
 
