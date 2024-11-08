@@ -1,20 +1,17 @@
 {
-    "Receta de Sopa de menestr\u00f3n": {
+    "Receta de Romanescu con jam�n": {
         "ingredientes": [
-            "1 kilogramo de pecho o punta de pecho de res",
-            "3 papa blanca",
-            "2 choclos en rodajas",
-            "150 gramos de fideo macarr\u00f3n o canuto",
-            "1 trozo de zapallo",
-            "150 gramos de habas peladas",
+            "1 romanescu",
             "1 cebolla",
-            "3 dientes de ajo",
-            "100 gramos de espinaca",
-            "\u00bd pu\u00f1ado de albahaca",
-            "sal al gusto"
+            "100 gramos de jam�n serrano",
+            "1 chorro de aceite de oliva",
+            "1 pizca de sal",
+            "1 pizca de pimienta"
         ],
-        "Duracion": "1h 30m",
-        "Dificultad": "media"
+        "Valoracion": "90.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Rumanescu"
     },
     "Receta de Arepa de queso": {
         "ingredientes": [
@@ -28,66 +25,508 @@
             "relleno",
             "350 gramos de queso para fundir (opcional)"
         ],
+        "Valoracion": "90.00%",
         "Duracion": "45m",
-        "Dificultad": "baja"
+        "Dificultad": "baja",
+        "Tipo": "Arepas"
     },
-    "Receta de Pollo con panko": {
+    "Receta de Chipa de queso": {
         "ingredientes": [
-            "500 gramos de filete de pechuga de pollo",
-            "2 dientes de ajo",
+            "500 gramos de f�cula de mandioca",
+            "120 gramos de queso pategras",
+            "120 gramos de queso sardo",
+            "2 huevos",
+            "1 cucharada postre de sal (opcional)",
+            "1 cucharada postre de nuez moscada (opcional)",
+            "� cucharada postre de pimienta (opcional)",
+            "100 mililitros de leche",
+            "100 gramos de manteca"
+        ],
+        "Valoracion": "88.60%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Pan"
+    },
+    "Receta de Muffins de chocolate con pepitas de chocolate": {
+        "ingredientes": [
+            "1 taza de Harina de trigo                                                                    (140 gramos)",
+            "� taza de Agua caliente",
+            "1 unidad de Huevo",
+            "2 cucharadas soperas de Az�car",
+            "2 cucharadas soperas de Miel",
+            "3 cucharadas soperas de Cacao o chocolate en polvo",
+            "1 cucharada sopera de Mantequilla o margarina ablandada",
+            "1 cucharadita de Bicarbonato de sodio",
+            "1 cucharadita de Polvo de hornear o levadura qu�mica",
+            "1 cucharadita de Esencia de vainilla (opcional)",
+            "Pepitas de chocolate"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Cupcakes"
+    },
+    "Receta de Pasteles chilenitos": {
+        "ingredientes": [
+            "220 gramos de harina de trigo",
+            "100 gramos de mantequilla fr�a",
+            "90 mililitros de leche",
+            "1 cucharada sopera de pisco",
+            "2 yemas",
+            "manjar"
+        ],
+        "Valoracion": "93.40%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Hojaldre dulce"
+    },
+    "Receta de Torta napole�n": {
+        "ingredientes": [
+            "500 gramos de harina",
+            "200 gramos de mantequilla fr�a",
+            "2 huevos",
+            "� taza de leche                                                                    (120 mililitros)",
+            "1 pizca de sal",
+            "750 mililitros de leche",
+            "230 gramos de mantequilla a temperatura ambiente",
+            "230 gramos de az�car",
+            "5 cucharadas soperas de harina",
+            "5 huevos",
+            "1 cucharadita de esencia de vainilla",
+            "frutos rojos (opcional)"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "2h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pasteles"
+    },
+    "Receta de Marquesas de almendra": {
+        "ingredientes": [
+            "250 gramos de almendra molida",
+            "250 gramos de az�car                                                                    (1� tazas)",
+            "1 cucharada sopera de harina normal",
+            "1 cucharada sopera de harina de ma�z (Maizena)",
+            "4 huevos",
+            "1 ralladura de lim�n",
+            "100 gramos de az�car glass"
+        ],
+        "Valoracion": "38.40%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Postres con frutos secos"
+    },
+    "Receta de Panellets de caf�": {
+        "ingredientes": [
+            "150 gramos de harina de almendra",
+            "100 gramos de az�car                                                                    (� taza)",
+            "1 clara de huevo",
+            "1 caf� expreso",
+            "4 cucharadas soperas de az�car glass"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "45m",
+        "Dificultad": "baja",
+        "Tipo": "Otros postres"
+    },
+    "T� helado": {
+        "ingredientes": [
+            "5 bolsas de t� de su preferencia",
+            "1 limones",
+            "hielo",
+            "500 mililitros de agua potable",
+            "az�car o stevia al gusto"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "10m",
+        "Dificultad": "baja",
+        "Tipo": "T�"
+    },
+    "Receta de Salsa pomarola": {
+        "ingredientes": [
+            "1 lata de tomates cubeteados",
+            "1 cebolla",
+            "1 diente de ajo",
+            "1 rama de apio",
+            "� pimiento verde o rojo",
+            "1 zanahoria",
+            "4 hojas de albahaca",
+            "1 cucharada sopera de aceite",
+            "� copa de vino blanco",
+            "Sal, pimienta, piment�n, tomillo, or�gano"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Salsas rojas"
+    },
+    "Receta de Hot dog americano original": {
+        "ingredientes": [
+            "2 Salchichas tipo Wiener o Frankfurt",
+            "2 Panecillos alargados",
+            "� Cebolla",
+            "1 Pimiento verde",
+            "2 lonchas de Bacon",
+            "Ketchup",
+            "Mostaza americana"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "10m",
+        "Dificultad": "baja",
+        "Tipo": "Salchicha"
+    },
+    "Receta de Ensalada de betarraga": {
+        "ingredientes": [
+            "3 papas blancas",
+            "3 zanahorias",
+            "3 betarragas",
+            "2 choclos",
+            "100 arverjas",
+            "mayonesa c/n",
+            "sal al gusto",
+            "1 lim�n"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "45m",
+        "Dificultad": "baja",
+        "Tipo": "Ensaladas saludables"
+    },
+    "Ponche de almendras": {
+        "ingredientes": [
+            "125 gramos de almendras",
+            "2 ramas de canela",
+            "5 clavos de olor",
+            "2 litros de agua",
+            "az�car al gusto",
+            "licor de ayrampo (opcional)",
+            "canela en polvo c/n"
+        ],
+        "Valoracion": "72.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Ponche"
+    },
+    "Receta de Tortilla de zucchini": {
+        "ingredientes": [
+            "3 zucchinis grandes",
+            "1 cebolla chica",
+            "3 huevos",
+            "1 cucharada postre de nuez moscada",
+            "� cucharada postre de ajo en polvo",
+            "1 pizca de pimienta",
+            "� cucharada postre de sal",
+            "1 cucharada postre de mostaza"
+        ],
+        "Valoracion": "66.60%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Calabac�n"
+    },
+    "Receta de Pasticho de pl�tano": {
+        "ingredientes": [
+            "5 pl�tanos no muy maduros",
+            "200 gramos de queso blanco o mozzarella",
+            "50 gramos de queso parmesano",
+            "Aceite suficiente para fre�r",
+            "250 gramos de carne molida",
+            "1 cebolla",
+            "1 piment�n",
+            "1 rama de ceboll�n grande",
+            "5 tomates grandes muy maduros",
+            "3 dientes de ajo",
+            "1 pizca de pimienta",
+            "1 pizca de comino",
+            "1 pizca de or�gano",
+            "sal al gusto",
+            "3 cucharadas soperas de aceite vegetal",
+            "600 mililitros de leche l�quida entera",
+            "50 gramos de mantequilla o margarina",
+            "50 gramos de harina de trigo ya tamizada",
+            "1 pizca de nuez moscada",
+            "sal al gusto"
+        ],
+        "Valoracion": "78.20%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Lasa�a"
+    },
+    "Receta de Polenta italiana": {
+        "ingredientes": [
+            "1 litro de agua",
+            "200 gramos de polenta",
+            "sal al gusto"
+        ],
+        "Valoracion": "60.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Otros cereales"
+    },
+    "Receta de Pizza porte�a": {
+        "ingredientes": [
+            "300 gramos de harina 000",
+            "15 gramos de levadura seca",
+            "1 cucharada sopera de aceite",
+            "180 cent�metros c�bicos de agua",
+            "120 gramos de mozzarella",
+            "� taza de pur� de tomate",
+            "1 cucharada postre de or�gano",
+            "1 cucharada postre de tomillo",
+            "1 cucharada postre de piment�n dulce"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Pizza"
+    },
+    "Receta de Medialunas grandes": {
+        "ingredientes": [
+            "250 gramos de harina 0000",
+            "250 gramos de harina 000",
+            "8 gramos de levadura seca",
+            "1 cucharada sopera de miel",
             "1 cucharada postre de sal",
-            "1 pizca de pimienta negra",
-            "1 taza de harina de trigo                                                                    (140 gramos)",
-            "1 huevo",
-            "1 taza de harina panko",
-            "500 mililitros de aceite"
+            "5 cucharadas soperas de az�car",
+            "1 cucharada postre de esencia de vainilla",
+            "300 cent�metros c�bicos de leche",
+            "100 gramos de manteca",
+            "100 gramos de grasa vacuna",
+            "25 gramos de harina",
+            "2 cucharadas soperas de agua",
+            "2 cucharadas soperas de az�car",
+            "1 cucharadita de miel"
         ],
-        "Duracion": "30m",
-        "Dificultad": "baja"
+        "Valoracion": "100.00%",
+        "Duracion": "6h",
+        "Dificultad": "alta",
+        "Tipo": "Boller�a"
     },
-    "Receta de Cachapas venezolanas": {
+    "Receta de Medialunas hojaldradas": {
         "ingredientes": [
-            "2 tazas de ma\u00edz desgranado",
-            "1 taza de agua o leche",
-            "2 cucharadas soperas de mantequilla",
-            "2 huevo (opcional)",
-            "4 cucharadas soperas de az\u00facar",
-            "1 cucharadita de sal",
-            "4 cucharadas soperas de harina de ma\u00edz",
-            "Queso de mano o mozzarella (opcional)"
+            "200 gramos de manteca",
+            "25 gramos de harina",
+            "250 gramos de harina 0000",
+            "250 gramos de harina 000",
+            "8 gramos de levadura seca o 25 de fresca",
+            "50 gramos de az�car                                                                    (� taza)",
+            "300 cent�metros c�bicos de leche",
+            "15 gramos de miel",
+            "1 cucharada postre de esencia de vainilla",
+            "4 cucharadas soperas de az�car",
+            "4 cucharadas soperas de agua",
+            "1 cucharadita de miel",
+            "1 gajo de c�scara de naranja",
+            "1 yema de huevo",
+            "25 cent�metros c�bicos de leche",
+            "1 pizca de sal",
+            "1 cucharada postre de az�car"
         ],
-        "Duracion": "30m",
-        "Dificultad": "baja"
+        "Valoracion": "80.00%",
+        "Duracion": "8h",
+        "Dificultad": "alta",
+        "Tipo": "Hojaldre dulce"
     },
-    "Receta de Caramelo para quesillo": {
+    "Receta de Sopaipillas veganas": {
         "ingredientes": [
-            "200 gramos de az\u00facar                                                                    (1 taza)",
-            "200 mililitros de agua"
+            "400 gramos de harina",
+            "200 gramos de zapallo cocido",
+            "2 cucharadas soperas de margarina vegetal",
+            "� cucharadita de sal",
+            "� cucharadita de az�car",
+            "2 cucharaditas de polvos de hornear",
+            "14 cucharadas soperas de agua",
+            "aceite para fre�r"
         ],
+        "Valoracion": "86.60%",
         "Duracion": "30m",
-        "Dificultad": "baja"
+        "Dificultad": "baja",
+        "Tipo": "Otros aperitivos"
     },
-    "Receta de Chocotorta helada": {
+    "Receta de Papas pay": {
         "ingredientes": [
-            "600 gramos de galletitas de chocolate",
-            "600 gramos de queso crema",
-            "400 gramos de dulce de leche",
-            "1 vaso de leche",
-            "1 cucharada sopera de cacao dulce"
+            "1 papa mediana",
+            "aceite para freir"
         ],
-        "Duracion": "30m",
-        "Dificultad": "muy baja"
+        "Valoracion": "20.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Patata"
     },
-    "Receta de Pur\u00e9 de papa colombiano": {
+    "Terremoto sin alcohol": {
         "ingredientes": [
-            "6 Patatas grandes",
-            "1 paquete de Salchichas",
-            "1 bote de Mayonesa",
-            "1 botella de Leche",
-            "1 pizca de Sal",
-            "1 paquete de Crema de leche"
+            "300 litros de jugo de pi�a",
+            "4 cucharadas soperas de helado de pi�a",
+            "2 cucharadas soperas de granadina"
         ],
-        "Duracion": "30m",
-        "Dificultad": "baja"
+        "Valoracion": "100.00%",
+        "Duracion": "10m",
+        "Dificultad": "baja",
+        "Tipo": "C�cteles"
+    },
+    "Receta de Medialunas con tapa de empanadas": {
+        "ingredientes": [
+            "12 discos de empanada",
+            "2 cucharadas soperas de manteca",
+            "1 cucharada sopera de az�car",
+            "7 dulce de leche repostero",
+            "40 grasa"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Bollos"
+    },
+    "Receta de Medialunas con tapas de pascualina": {
+        "ingredientes": [
+            "1 tapa de pascualina",
+            "1 loncha de jam�n y queso",
+            "7 dulce de leche repostero",
+            "40 grasa"
+        ],
+        "Valoracion": "65.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Bollos"
+    },
+    "Receta de Crema diplomata": {
+        "ingredientes": [
+            "6 yemas",
+            "120 gramos de az�car",
+            "60 gramos de almid�n de maiz o maicena",
+            "600 cent�metros c�bicos de leche",
+            "200 cent�metros c�bicos de crema de leche o nata",
+            "1 cucharada postre de esencia de vainilla"
+        ],
+        "Valoracion": "84.00%",
+        "Duracion": "2h 30m",
+        "Dificultad": "media",
+        "Tipo": "Cremas pasteleras"
+    },
+    "Receta de Pan caracol": {
+        "ingredientes": [
+            "500 gramos de harina panadera",
+            "100 gramos de az�car                                                                    (� taza)",
+            "5 gramos de sal",
+            "8 gramos de levadura seca instant�nea",
+            "60 gramos de mantequilla",
+            "240 gramos de agua",
+            "15 gramos de an�s"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pan"
+    },
+    "Receta de Galette des rois o pastel de Reyes": {
+        "ingredientes": [
+            "300 gramos de leche",
+            "25 gramos de maicena",
+            "75 gramos de az�car",
+            "80 gramos de yemas",
+            "esencia de vainilla",
+            "80 gramos de mantequilla",
+            "80 gramos de az�car",
+            "2 huevos",
+            "90 gramos de almendras en polvo",
+            "20 gramos de ron negro",
+            "Esencia de vainilla",
+            "Masa hojaldre"
+        ],
+        "Valoracion": "69.20%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pasteles"
+    },
+    "Receta de Torta pompadour de pl�tano": {
+        "ingredientes": [
+            "500 gramos de harina",
+            "200 gramos de mantequilla fr�a",
+            "2 huevos",
+            "� taza de leche                                                                    (120 mililitros)",
+            "1 pizca de sal",
+            "4 pl�tanos",
+            "1 taza de az�car flor",
+            "700 mililitros de crema de leche fr�a",
+            "500 gramos de manjar"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pasteles"
+    },
+    "Receta de Arrollado de malaya": {
+        "ingredientes": [
+            "1 kilogramo de malaya de vacuno o cerdo",
+            "1 pimento verde en tiras",
+            "1 pimento rojo en tiras",
+            "2 zanahorias en tiras",
+            "1 cebolla morada en tiras",
+            "1 diente de ajo",
+            "sal y pimienta al gusto",
+            "oregano al gusto"
+        ],
+        "Valoracion": "60.00%",
+        "Duracion": "2h 30m",
+        "Dificultad": "media",
+        "Tipo": "Vaca"
+    },
+    "Receta de Caldo de pata": {
+        "ingredientes": [
+            "1 pieza de patas de vacuno cortadas en trozos",
+            "2 zanahorias",
+            "1 cebolla",
+            "2 ramas de apio",
+            "2 dientes de ajo",
+            "sal al gusto",
+            "perejil al gusto",
+            "2 papas",
+            "300 gramos de zapallo",
+            "1 pimenton rojo",
+            "1 camote o batata"
+        ],
+        "Valoracion": "93.40%",
+        "Duracion": "3h",
+        "Dificultad": "alta",
+        "Tipo": "Caldos"
+    },
+    "Receta de Torta amor chilena": {
+        "ingredientes": [
+            "500 gramos de harina",
+            "200 gramos de mantequilla fr�a",
+            "2 huevos",
+            "� taza de leche                                                                    (120 mililitros)",
+            "1 pizca de sal",
+            "Relleno",
+            "1� tazas de leche                                                                    (420 mililitros)",
+            "� taza de az�car                                                                    (100 gramos)",
+            "1� cucharadas soperas de maicena",
+            "2 yemas",
+            "400 gramos de manjar",
+            "400 mililitros de crema para batir fr�a",
+            "� taza de mermelada de frambuesa",
+            "2 cucharadas soperas de az�car flor"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "6h",
+        "Dificultad": "alta",
+        "Tipo": "Hojaldre dulce"
+    },
+    "Receta de Torta 4 leches": {
+        "ingredientes": [
+            "4 huevos",
+            "120 gramos de az�car",
+            "120 gramos de harina de trigo",
+            "� cucharadita de polvo de hornear",
+            "1 cucharadita de esencia de vainilla",
+            "1 pizca de sal",
+            "1 tarro de leche condensada",
+            "1 tarro de leche evaporada",
+            "200 granos de crema de leche",
+            "250 gramos de manjar",
+            "100 gramos de clara de huevos",
+            "200 gramos de az�car                                                                    (1 taza)"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "6h",
+        "Dificultad": "alta",
+        "Tipo": "Pasteles"
     }
 }
