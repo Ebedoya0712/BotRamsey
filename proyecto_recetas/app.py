@@ -52,7 +52,7 @@ def convert_to_minutes(duration):
         total_minutes += int(minutes.group(1))
     return total_minutes
 
-# Crear columna de duración en minutos para el gráfico y renombrar la columna formateada a "Duracion"
+# Crear columna de duración formateada para la tabla y duración en minutos para el gráfico
 df['Duracion'] = df['Duracion'].apply(format_duration)
 df['DuracionMinutos'] = df['Duracion'].apply(convert_to_minutes)
 df['Valoracion'] = df['Valoracion'].str.replace('%', '').astype(float)
@@ -85,9 +85,9 @@ dificultad = st.sidebar.selectbox('Selecciona la dificultad', ['todas', 'baja', 
 if dificultad != 'todas':
     df = df[df['Dificultad'] == dificultad]
 
-# Mostrar la tabla de datos de las recetas con la duración formateada sin la numeración
+# Mostrar la tabla de datos de las recetas con la duración formateada
 st.subheader('Datos de las recetas')
-st.table(df[['Recetas', 'Duracion', 'Dificultad', 'Valoracion']])
+st.dataframe(df[['Recetas', 'Duracion', 'Dificultad', 'Valoracion']])
 
 # Gráfico de duración de las recetas usando la columna de duración en minutos
 st.subheader('Gráfico de Duración de las Recetas')
