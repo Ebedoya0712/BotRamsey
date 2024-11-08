@@ -1,4 +1,52 @@
 {
+    "Receta de Romanescu con jamón": {
+        "ingredientes": [
+            "1 romanescu",
+            "1 cebolla",
+            "100 gramos de jamón serrano",
+            "1 chorro de aceite de oliva",
+            "1 pizca de sal",
+            "1 pizca de pimienta"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Rumanescu"
+    },
+    "Receta de Arepa de queso": {
+        "ingredientes": [
+            "masa",
+            "2 tazas de agua                                                                    (480 mililitros)",
+            "2 tazas de harina precocida de maiz",
+            "1 cucharada sopera de mantequilla (opcional)",
+            "250 gramos de queso semi blando fresco",
+            "100 gramos de queso duro fresco",
+            "125 mililitros de agua adicional",
+            "relleno",
+            "350 gramos de queso para fundir (opcional)"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "45m",
+        "Dificultad": "baja",
+        "Tipo": "Arepas"
+    },
+    "Receta de Chipa de queso": {
+        "ingredientes": [
+            "500 gramos de fécula de mandioca",
+            "120 gramos de queso pategras",
+            "120 gramos de queso sardo",
+            "2 huevos",
+            "1 cucharada postre de sal (opcional)",
+            "1 cucharada postre de nuez moscada (opcional)",
+            "½ cucharada postre de pimienta (opcional)",
+            "100 mililitros de leche",
+            "100 gramos de manteca"
+        ],
+        "Valoracion": "88.60%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Pan"
+    },
     "Receta de Muffins de chocolate con pepitas de chocolate": {
         "ingredientes": [
             "1 taza de Harina de trigo                                                                    (140 gramos)",
@@ -13,87 +61,472 @@
             "1 cucharadita de Esencia de vainilla (opcional)",
             "Pepitas de chocolate"
         ],
-        "valoracion": "80.00%",
+        "Valoracion": "80.00%",
         "Duracion": "30m",
-        "Dificultad": "baja"
+        "Dificultad": "baja",
+        "Tipo": "Cupcakes"
     },
-    "Receta de Arepa de queso": {
+    "Receta de Pasteles chilenitos": {
         "ingredientes": [
-            "masa",
-            "2 tazas de agua                                                                    (480 mililitros)",
-            "2 tazas de harina precocida de maiz",
-            "1 cucharada sopera de mantequilla (opcional)",
-            "250 gramos de queso semi blando fresco",
-            "100 gramos de queso duro fresco",
-            "125 mililitros de agua adicional",
-            "relleno",
-            "350 gramos de queso para fundir (opcional)"
+            "220 gramos de harina de trigo",
+            "100 gramos de mantequilla fría",
+            "90 mililitros de leche",
+            "1 cucharada sopera de pisco",
+            "2 yemas",
+            "manjar"
         ],
-        "valoracion": "90.00%",
-        "Duracion": "45m",
-        "Dificultad": "baja"
+        "Valoracion": "93.40%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Hojaldre dulce"
     },
-    "Receta de Romanescu con jamón": {
+    "Receta de Torta napoleón": {
         "ingredientes": [
-            "1 romanescu",
-            "1 cebolla",
-            "100 gramos de jamón serrano",
-            "1 chorro de aceite de oliva",
-            "1 pizca de sal",
-            "1 pizca de pimienta"
-        ],
-        "valoracion": "90.00%",
-        "Duracion": "30m",
-        "Dificultad": "baja"
-    },
-    "Receta de Chipa de queso": {
-        "ingredientes": [
-            "500 gramos de fécula de mandioca",
-            "120 gramos de queso pategras",
-            "120 gramos de queso sardo",
+            "500 gramos de harina",
+            "200 gramos de mantequilla fría",
             "2 huevos",
-            "1 cucharada postre de sal (opcional)",
-            "1 cucharada postre de nuez moscada (opcional)",
-            "½ cucharada postre de pimienta (opcional)",
-            "100 mililitros de leche",
-            "100 gramos de manteca"
+            "½ taza de leche                                                                    (120 mililitros)",
+            "1 pizca de sal",
+            "750 mililitros de leche",
+            "230 gramos de mantequilla a temperatura ambiente",
+            "230 gramos de azúcar",
+            "5 cucharadas soperas de harina",
+            "5 huevos",
+            "1 cucharadita de esencia de vainilla",
+            "frutos rojos (opcional)"
         ],
-        "valoracion": "88.60%",
-        "Duracion": "30m",
-        "Dificultad": "baja"
-    },
-    "Receta de Pollo con panko": {
-        "ingredientes": [
-            "500 gramos de filete de pechuga de pollo",
-            "2 dientes de ajo",
-            "1 cucharada postre de sal",
-            "1 pizca de pimienta negra",
-            "1 taza de harina de trigo                                                                    (140 gramos)",
-            "1 huevo",
-            "1 taza de harina panko",
-            "500 mililitros de aceite"
-        ],
-        "valoracion": "100.00%",
-        "Duracion": "30m",
-        "Dificultad": "baja"
-    },
-    "Receta de Lasaña": {
-        "ingredientes": [
-            "300 mililitros de Salsa bechamel",
-            "12 láminas de Pasta para lasaña",
-            "1 kilogramo de Carne picada (mitad cerdo y mitad ternera)",
-            "1 unidad de Cebolla",
-            "2 dientes de Ajo",
-            "400 gramos de Tomate triturado",
-            "100 gramos de Tomate frito (unas 5 o 6 cucharadas)",
-            "5 cucharadas soperas de Aceite de oliva (unos 50 ml)",
-            "50 gramos de Queso rallado",
-            "1 trozo de Mantequilla para untar en la fuente",
-            "2 litros de Agua",
-            "1 pizca de Sal y Pimienta negra molida"
-        ],
-        "valoracion": "90.00%",
+        "Valoracion": "90.00%",
         "Duracion": "2h 30m",
-        "Dificultad": "media"
+        "Dificultad": "media",
+        "Tipo": "Pasteles"
+    },
+    "Receta de Marquesas de almendra": {
+        "ingredientes": [
+            "250 gramos de almendra molida",
+            "250 gramos de azúcar                                                                    (1¼ tazas)",
+            "1 cucharada sopera de harina normal",
+            "1 cucharada sopera de harina de maíz (Maizena)",
+            "4 huevos",
+            "1 ralladura de limón",
+            "100 gramos de azúcar glass"
+        ],
+        "Valoracion": "38.40%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Postres con frutos secos"
+    },
+    "Receta de Panellets de café": {
+        "ingredientes": [
+            "150 gramos de harina de almendra",
+            "100 gramos de azúcar                                                                    (½ taza)",
+            "1 clara de huevo",
+            "1 café expreso",
+            "4 cucharadas soperas de azúcar glass"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "45m",
+        "Dificultad": "baja",
+        "Tipo": "Otros postres"
+    },
+    "Té helado": {
+        "ingredientes": [
+            "5 bolsas de té de su preferencia",
+            "1 limones",
+            "hielo",
+            "500 mililitros de agua potable",
+            "azúcar o stevia al gusto"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "10m",
+        "Dificultad": "baja",
+        "Tipo": "Té"
+    },
+    "Receta de Salsa pomarola": {
+        "ingredientes": [
+            "1 lata de tomates cubeteados",
+            "1 cebolla",
+            "1 diente de ajo",
+            "1 rama de apio",
+            "¼ pimiento verde o rojo",
+            "1 zanahoria",
+            "4 hojas de albahaca",
+            "1 cucharada sopera de aceite",
+            "½ copa de vino blanco",
+            "Sal, pimienta, pimentón, tomillo, orégano"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Salsas rojas"
+    },
+    "Receta de Hot dog americano original": {
+        "ingredientes": [
+            "2 Salchichas tipo Wiener o Frankfurt",
+            "2 Panecillos alargados",
+            "½ Cebolla",
+            "1 Pimiento verde",
+            "2 lonchas de Bacon",
+            "Ketchup",
+            "Mostaza americana"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "10m",
+        "Dificultad": "baja",
+        "Tipo": "Salchicha"
+    },
+    "Receta de Ensalada de betarraga": {
+        "ingredientes": [
+            "3 papas blancas",
+            "3 zanahorias",
+            "3 betarragas",
+            "2 choclos",
+            "100 arverjas",
+            "mayonesa c/n",
+            "sal al gusto",
+            "1 limón"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "45m",
+        "Dificultad": "baja",
+        "Tipo": "Ensaladas saludables"
+    },
+    "Ponche de almendras": {
+        "ingredientes": [
+            "125 gramos de almendras",
+            "2 ramas de canela",
+            "5 clavos de olor",
+            "2 litros de agua",
+            "azúcar al gusto",
+            "licor de ayrampo (opcional)",
+            "canela en polvo c/n"
+        ],
+        "Valoracion": "72.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Ponche"
+    },
+    "Receta de Tortilla de zucchini": {
+        "ingredientes": [
+            "3 zucchinis grandes",
+            "1 cebolla chica",
+            "3 huevos",
+            "1 cucharada postre de nuez moscada",
+            "½ cucharada postre de ajo en polvo",
+            "1 pizca de pimienta",
+            "¼ cucharada postre de sal",
+            "1 cucharada postre de mostaza"
+        ],
+        "Valoracion": "66.60%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Calabacín"
+    },
+    "Receta de Pasticho de plátano": {
+        "ingredientes": [
+            "5 plátanos no muy maduros",
+            "200 gramos de queso blanco o mozzarella",
+            "50 gramos de queso parmesano",
+            "Aceite suficiente para freír",
+            "250 gramos de carne molida",
+            "1 cebolla",
+            "1 pimentón",
+            "1 rama de cebollín grande",
+            "5 tomates grandes muy maduros",
+            "3 dientes de ajo",
+            "1 pizca de pimienta",
+            "1 pizca de comino",
+            "1 pizca de orégano",
+            "sal al gusto",
+            "3 cucharadas soperas de aceite vegetal",
+            "600 mililitros de leche líquida entera",
+            "50 gramos de mantequilla o margarina",
+            "50 gramos de harina de trigo ya tamizada",
+            "1 pizca de nuez moscada",
+            "sal al gusto"
+        ],
+        "Valoracion": "78.20%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Lasaña"
+    },
+    "Receta de Polenta italiana": {
+        "ingredientes": [
+            "1 litro de agua",
+            "200 gramos de polenta",
+            "sal al gusto"
+        ],
+        "Valoracion": "60.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Otros cereales"
+    },
+    "Receta de Pizza porteña": {
+        "ingredientes": [
+            "300 gramos de harina 000",
+            "15 gramos de levadura seca",
+            "1 cucharada sopera de aceite",
+            "180 centímetros cúbicos de agua",
+            "120 gramos de mozzarella",
+            "½ taza de puré de tomate",
+            "1 cucharada postre de orégano",
+            "1 cucharada postre de tomillo",
+            "1 cucharada postre de pimentón dulce"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Pizza"
+    },
+    "Receta de Medialunas grandes": {
+        "ingredientes": [
+            "250 gramos de harina 0000",
+            "250 gramos de harina 000",
+            "8 gramos de levadura seca",
+            "1 cucharada sopera de miel",
+            "1 cucharada postre de sal",
+            "5 cucharadas soperas de azúcar",
+            "1 cucharada postre de esencia de vainilla",
+            "300 centímetros cúbicos de leche",
+            "100 gramos de manteca",
+            "100 gramos de grasa vacuna",
+            "25 gramos de harina",
+            "2 cucharadas soperas de agua",
+            "2 cucharadas soperas de azúcar",
+            "1 cucharadita de miel"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "6h",
+        "Dificultad": "alta",
+        "Tipo": "Bollería"
+    },
+    "Receta de Medialunas hojaldradas": {
+        "ingredientes": [
+            "200 gramos de manteca",
+            "25 gramos de harina",
+            "250 gramos de harina 0000",
+            "250 gramos de harina 000",
+            "8 gramos de levadura seca o 25 de fresca",
+            "50 gramos de azúcar                                                                    (¼ taza)",
+            "300 centímetros cúbicos de leche",
+            "15 gramos de miel",
+            "1 cucharada postre de esencia de vainilla",
+            "4 cucharadas soperas de azúcar",
+            "4 cucharadas soperas de agua",
+            "1 cucharadita de miel",
+            "1 gajo de cáscara de naranja",
+            "1 yema de huevo",
+            "25 centímetros cúbicos de leche",
+            "1 pizca de sal",
+            "1 cucharada postre de azúcar"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "8h",
+        "Dificultad": "alta",
+        "Tipo": "Hojaldre dulce"
+    },
+    "Receta de Sopaipillas veganas": {
+        "ingredientes": [
+            "400 gramos de harina",
+            "200 gramos de zapallo cocido",
+            "2 cucharadas soperas de margarina vegetal",
+            "½ cucharadita de sal",
+            "½ cucharadita de azúcar",
+            "2 cucharaditas de polvos de hornear",
+            "14 cucharadas soperas de agua",
+            "aceite para freír"
+        ],
+        "Valoracion": "86.60%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Otros aperitivos"
+    },
+    "Receta de Papas pay": {
+        "ingredientes": [
+            "1 papa mediana",
+            "aceite para freir"
+        ],
+        "Valoracion": "20.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Patata"
+    },
+    "Terremoto sin alcohol": {
+        "ingredientes": [
+            "300 litros de jugo de piña",
+            "4 cucharadas soperas de helado de piña",
+            "2 cucharadas soperas de granadina"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "10m",
+        "Dificultad": "baja",
+        "Tipo": "Cócteles"
+    },
+    "Receta de Medialunas con tapa de empanadas": {
+        "ingredientes": [
+            "12 discos de empanada",
+            "2 cucharadas soperas de manteca",
+            "1 cucharada sopera de azúcar",
+            "7 dulce de leche repostero",
+            "40 grasa"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Bollos"
+    },
+    "Receta de Medialunas con tapas de pascualina": {
+        "ingredientes": [
+            "1 tapa de pascualina",
+            "1 loncha de jamón y queso",
+            "7 dulce de leche repostero",
+            "40 grasa"
+        ],
+        "Valoracion": "65.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Bollos"
+    },
+    "Receta de Crema diplomata": {
+        "ingredientes": [
+            "6 yemas",
+            "120 gramos de azúcar",
+            "60 gramos de almidón de maiz o maicena",
+            "600 centímetros cúbicos de leche",
+            "200 centímetros cúbicos de crema de leche o nata",
+            "1 cucharada postre de esencia de vainilla"
+        ],
+        "Valoracion": "84.00%",
+        "Duracion": "2h 30m",
+        "Dificultad": "media",
+        "Tipo": "Cremas pasteleras"
+    },
+    "Receta de Pan caracol": {
+        "ingredientes": [
+            "500 gramos de harina panadera",
+            "100 gramos de azúcar                                                                    (½ taza)",
+            "5 gramos de sal",
+            "8 gramos de levadura seca instantánea",
+            "60 gramos de mantequilla",
+            "240 gramos de agua",
+            "15 gramos de anís"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pan"
+    },
+    "Receta de Galette des rois o pastel de Reyes": {
+        "ingredientes": [
+            "300 gramos de leche",
+            "25 gramos de maicena",
+            "75 gramos de azúcar",
+            "80 gramos de yemas",
+            "esencia de vainilla",
+            "80 gramos de mantequilla",
+            "80 gramos de azúcar",
+            "2 huevos",
+            "90 gramos de almendras en polvo",
+            "20 gramos de ron negro",
+            "Esencia de vainilla",
+            "Masa hojaldre"
+        ],
+        "Valoracion": "69.20%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pasteles"
+    },
+    "Receta de Torta pompadour de plátano": {
+        "ingredientes": [
+            "500 gramos de harina",
+            "200 gramos de mantequilla fría",
+            "2 huevos",
+            "½ taza de leche                                                                    (120 mililitros)",
+            "1 pizca de sal",
+            "4 plátanos",
+            "1 taza de azúcar flor",
+            "700 mililitros de crema de leche fría",
+            "500 gramos de manjar"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pasteles"
+    },
+    "Receta de Arrollado de malaya": {
+        "ingredientes": [
+            "1 kilogramo de malaya de vacuno o cerdo",
+            "1 pimento verde en tiras",
+            "1 pimento rojo en tiras",
+            "2 zanahorias en tiras",
+            "1 cebolla morada en tiras",
+            "1 diente de ajo",
+            "sal y pimienta al gusto",
+            "oregano al gusto"
+        ],
+        "Valoracion": "60.00%",
+        "Duracion": "2h 30m",
+        "Dificultad": "media",
+        "Tipo": "Vaca"
+    },
+    "Receta de Caldo de pata": {
+        "ingredientes": [
+            "1 pieza de patas de vacuno cortadas en trozos",
+            "2 zanahorias",
+            "1 cebolla",
+            "2 ramas de apio",
+            "2 dientes de ajo",
+            "sal al gusto",
+            "perejil al gusto",
+            "2 papas",
+            "300 gramos de zapallo",
+            "1 pimenton rojo",
+            "1 camote o batata"
+        ],
+        "Valoracion": "93.40%",
+        "Duracion": "3h",
+        "Dificultad": "alta",
+        "Tipo": "Caldos"
+    },
+    "Receta de Torta amor chilena": {
+        "ingredientes": [
+            "500 gramos de harina",
+            "200 gramos de mantequilla fría",
+            "2 huevos",
+            "½ taza de leche                                                                    (120 mililitros)",
+            "1 pizca de sal",
+            "Relleno",
+            "1¾ tazas de leche                                                                    (420 mililitros)",
+            "½ taza de azúcar                                                                    (100 gramos)",
+            "1½ cucharadas soperas de maicena",
+            "2 yemas",
+            "400 gramos de manjar",
+            "400 mililitros de crema para batir fría",
+            "¾ taza de mermelada de frambuesa",
+            "2 cucharadas soperas de azúcar flor"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "6h",
+        "Dificultad": "alta",
+        "Tipo": "Hojaldre dulce"
+    },
+    "Receta de Torta 4 leches": {
+        "ingredientes": [
+            "4 huevos",
+            "120 gramos de azúcar",
+            "120 gramos de harina de trigo",
+            "½ cucharadita de polvo de hornear",
+            "1 cucharadita de esencia de vainilla",
+            "1 pizca de sal",
+            "1 tarro de leche condensada",
+            "1 tarro de leche evaporada",
+            "200 granos de crema de leche",
+            "250 gramos de manjar",
+            "100 gramos de clara de huevos",
+            "200 gramos de azúcar                                                                    (1 taza)"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "6h",
+        "Dificultad": "alta",
+        "Tipo": "Pasteles"
     }
 }

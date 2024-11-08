@@ -1,4 +1,5 @@
 import streamlit as st
+import proyecto_recetas.analisis as analisis
 import src.scraping.scraper as sp  # funciones de scraping de recetas
 
 
@@ -9,12 +10,15 @@ def main():
 
     # Inicialización de los estados en la sesión
     inicializar_estado()
-    
-    cargar_historial(st.session_state.mensajes)  # Cargar historial de chat
     sp.guardar_archivos(st.session_state.Base)  # Guardar archivos actualizados
 
-    chat()
-
+    if st.button("ver analisis") or st.session_state['analisis']:
+        analisis.graficar()
+        st.session_state['analisis'] = True
+        st.button("Salir", key="salir")
+    else:   
+        cargar_historial(st.session_state.mensajes)  # Cargar historial de chat
+        chat()
 
 def inicializar_estado():
     ### Inicializa los valores de sesión al inicio o si es necesario reiniciar ### 
@@ -23,6 +27,7 @@ def inicializar_estado():
         'paso': 0,
         'preparar': False,
         'siguiente': False,
+        'analisis':False,
         'salir': False,
         'cronometro': False,
         'tiempo': 0,
@@ -33,6 +38,7 @@ def inicializar_estado():
             st.session_state[key] = value
     if st.session_state['salir']:
         st.session_state['paso'] = 0
+        st.session_state['analisis'] = False
 
 
 def chat():
