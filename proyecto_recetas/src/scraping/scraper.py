@@ -1,5 +1,6 @@
 #En este archivo se van a manejar el codigo para poder realizar web scrapin a las recetas de las siguientes paginas:
 #www.recetasgratis.net
+
 from bs4 import BeautifulSoup
 import requests
 import streamlit as st
@@ -8,132 +9,139 @@ import json
 import pandas as pd
 import os
 
+def obtener_contenido(enlace):
+    ### Realiza una solicitud HTTP y devuelve el contenido en formato BeautifulSoup ### 
+    try:
+        respuesta = requests.get(enlace)
+        respuesta.raise_for_status()
+        return BeautifulSoup(respuesta.text, 'html.parser')
+    except requests.RequestException:
+        st.subheader("Lamentablemente no dispongo de esa receta")
+        return None
+
+
 
 def obtener_receta(enlace):
-    # Extraer información de la receta de la página web
+    ### Extrae información de la receta de la página y la muestra ### 
     sopa = obtener_contenido(enlace)
-    titulo = sopa.find('h1', class_='titulo titulo--articulo').get_text()
-    propiedades = [prop.get_text() for prop in sopa.find('div', class_='properties').find_all('span')]
-    ingredientes = [ing.get_text() for ing in sopa.find('div', class_='ingredientes').find_all('label')]
+    if not sopa:
+        return
 
-    guardar_datos(titulo, propiedades, ingredientes)
+    titulo = sopa.find('h1', class_='titulo titulo--articulo').get_text(strip=True)
+    tipo = sopa.find('a', class_='post-categoria-link').get_text(strip=True)
+    valoracion = sopa.find('div', class_='valoracion').get('style', '').split(':')[-1].strip()
+    propiedades = [prop.get_text(strip=True) for prop in sopa.select('div.properties span')]
+    ingredientes = [ing.get_text(strip=True) for ing in sopa.select('div.ingredientes label')]
+
+    guardar_datos(titulo, propiedades, ingredientes, valoracion, tipo)
 
     st.subheader(titulo)
     st.write("\n\n".join(propiedades))
-
+    st.write(f"Al {valoracion} de los usuarios les gusta esta receta")
     st.subheader("Lista De Ingredientes")
     st.write("\n\n".join(ingredientes))
-    
 
-def obtener_contenido(url):
-    import requests
-    from bs4 import BeautifulSoup
-
-    response = requests.get(url)
-    if response.status_code == 200:
-        return BeautifulSoup(response.text, 'html.parser')
-    return None
-
-def guardar_datos(titulo, propiedades, ingredientes):
-    session_state = streamlit.session_state
-    if "Base" not in session_state:
-        session_state.Base = {}
-
-    receta = {
-        "ingredientes": [ingrediente.strip() for ingrediente in ingredientes]
-    }
-    
-    # Filtrar duración y dificultad por separado
-    duracion = next((prop for prop in propiedades if "minutos" in prop), None)
-    dificultad = next((prop.replace("Dificultad ", "").strip() for prop in propiedades if "Dificultad" in prop), None)
-
-    receta["Duracion"] = duracion
-    receta["Dificultad"] = dificultad
-
-    session_state.Base[titulo] = receta
 
 
 def mostrar_pasos(enlace):
-    # Extraer y mostrar los pasos de preparación de la receta
+    ### Extrae y muestra los pasos de preparación de la receta ### 
     sopa = obtener_contenido(enlace)
-    pasos = list(map(lambda x: x.get_text(), sopa.find_all("div", class_="apartado")))
+    if not sopa:
+        return
+
+    pasos = [p.get_text() for p in sopa.select("div.apartado")]
 
     if st.session_state.paso < len(pasos):
         st.subheader("Pasos de preparación:")
-        st.write(pasos[st.session_state.paso] + "\n\n")
+        paso_actual = pasos[st.session_state.paso]
+        st.write(paso_actual + "\n")
 
-        # Si hay una referencia a "minuto", iniciar el cronómetro
-        if "minuto" in pasos[st.session_state.paso]:
-            indice = pasos[st.session_state.paso].index("minuto") - 2
-            tiempo = pasos[st.session_state.paso][indice]     
-            while pasos[st.session_state.paso][indice - 1].isdigit():
-                tiempo = pasos[st.session_state.paso][indice - 1] + tiempo
-                indice -= 1 
-            st.session_state.tiempo = int(tiempo)
-            st.button("Iniciar cronómetro", key="cronometro")
+        if "minuto" in paso_actual:
+            tiempo = extraer_minutos(paso_actual)
+            if tiempo:
+                st.session_state.tiempo = int(tiempo)
+                st.button("Iniciar cronómetro", key="cronometro")
+
+
+
+def extraer_minutos(texto):
+    ### Extrae los minutos de un texto si se menciona la palabra 'minuto' ### 
+    index = texto.find("minuto")
+    if index != -1:
+        tiempo_str = ''.join(filter(str.isdigit, texto[max(0, index - 3):index]))
+        return tiempo_str if tiempo_str.isdigit() else None
+    return None
+
 
 
 def buscar_receta(busqueda):
-    busqueda = busqueda.replace(" ", "+")
-    enlace_web = f"https://www.recetasgratis.net/busqueda?q={busqueda}"
+    ### Busca recetas y obtiene el primer enlace ### 
+    enlace_web = f"https://www.recetasgratis.net/busqueda?q={busqueda.replace(' ', '+')}"
     sopa = obtener_contenido(enlace_web)
-    
-    # Pausa entre solicitudes para evitar bloqueos
-    time.sleep(1)
-    
-    resultado = sopa.find('div', class_='resultado link')
-    enlace = resultado.find('a')
-    if enlace:
-        obtener_receta(enlace.get('href'))
-        return enlace.get('href')
-    else:
-        print("No se encontró un enlace para la receta.")
+    if not sopa:
         return None
 
+    enlace = sopa.select_one('div.resultado.link a')
+    if enlace:
+        href = enlace.get('href')
+        obtener_receta(href)
+        return href
+    return None
+
+
+
 def temporizador(minutos):
-    # Temporizador que cuenta hacia atrás
+    ### Temporizador que cuenta hacia atrás ### 
     marcador = st.empty()
     st.button("Siguiente paso", key="siguiente")
 
-    for i in range(minutos, 0, -1):
-        for j in range(60, 0, -1):
-            with marcador:
-                st.write(f"\rTiempo restante: {i-1} minutos : {j-1} segundos")
-            time.sleep(1)
+    for i in range(minutos * 60, 0, -1):
+        with marcador:
+            minutos_restantes, segundos_restantes = divmod(i, 60)
+            st.write(f"Tiempo restante: {minutos_restantes} minutos : {segundos_restantes} segundos")
+        time.sleep(1)
 
     st.write("\n¡Tiempo finalizado!")
 
-def guardar_datos(titulo, propiedades, ingredientes):
-    if titulo in st.session_state.Base.keys():
-        return 0
-    else:
-        Receta = {"ingredientes" : [ingrediente.strip() for ingrediente in ingredientes], "Duracion": propiedades[1]}
+# Funciones de Datos
 
-        for i in propiedades:
-            if "Dificultad" in i:
-                Receta["Dificultad"] = " ".join(i.split()[1:])
+def guardar_datos(titulo, propiedades, ingredientes, valoracion, tipo):
+    ### Guarda la receta en la base de datos de sesión ### 
+    if titulo not in st.session_state.Base:
+        receta = {
+            "ingredientes": [ingrediente.strip() for ingrediente in ingredientes],
+            "Valoracion": valoracion,
+            "Duracion": propiedades[1] if len(propiedades) > 1 else "Desconocido",
+            "Dificultad": next((p.split()[-1] for p in propiedades if "Dificultad" in p), "Desconocida"),
+            "Tipo": tipo
+        }
+        st.session_state.Base[titulo] = receta
 
-        st.session_state.Base[titulo] = Receta
+
 
 def guardar_archivos(Base):
-    if len(Base) != 0:
+    ### Guarda la base de datos en archivos JSON y CSV ### 
+    if Base:
+        # Guardar JSON
         with open('proyecto_recetas/data/recetas.json', 'w') as f:
-            json.dump(Base, f, indent=4)
-        
-        data = {
-            "Recetas" : list(Base.keys()),
-            "Duracion" : [Base[i]['Duracion'] for i in Base],
-            "Dificultad" : [Base[i]['Dificultad'] for i in Base],
-        }
+            json.dump(Base, f, indent=4, ensure_ascii=False)
 
-        df = pd.DataFrame(data)
-        df.to_csv('proyecto_recetas/data/recetas.csv', index=False)
+        # Guardar CSV
+        data = {
+            "Recetas": list(Base.keys()),
+            "Duracion": [receta['Duracion'] for receta in Base.values()],
+            "Dificultad": [receta['Dificultad'] for receta in Base.values()],
+            "Valoracion": [receta['Valoracion'] for receta in Base.values()],
+            "Tipo": [receta['Tipo'] for receta in Base.values()]
+        }
+        pd.DataFrame(data).to_csv('proyecto_recetas/data/recetas.csv', index=False)
 
 
 
 def cargar_datos():
-    if os.path.exists('proyecto_recetas/data/recetas.json'):
-        with open('proyecto_recetas/data/recetas.json', 'r') as f:
+    ### Carga los datos desde el archivo JSON si existe ### 
+    path = 'proyecto_recetas/data/recetas.json'
+    if os.path.exists(path):
+        with open(path, 'r') as f:
             return json.load(f)
-    else:
-        return {}
+    return {}

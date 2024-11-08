@@ -1,8 +1,33 @@
-Recetas,Duracion,Dificultad
-Receta de Sopa de menestrón,1h 30m,media
-Receta de Arepa de queso,45m,baja
-Receta de Pollo con panko,30m,baja
-Receta de Cachapas venezolanas,30m,baja
-Receta de Caramelo para quesillo,30m,baja
-Receta de Chocotorta helada,30m,muy baja
-Receta de Puré de papa colombiano,30m,baja
+Recetas,Duracion,Dificultad,Valoracion,Tipo
+Receta de Romanescu con jamón,30m,baja,90.00%,Rumanescu
+Receta de Arepa de queso,45m,baja,90.00%,Arepas
+Receta de Chipa de queso,30m,baja,88.60%,Pan
+Receta de Muffins de chocolate con pepitas de chocolate,30m,baja,80.00%,Cupcakes
+Receta de Pasteles chilenitos,1h 30m,media,93.40%,Hojaldre dulce
+Receta de Torta napoleón,2h 30m,media,90.00%,Pasteles
+Receta de Marquesas de almendra,30m,baja,38.40%,Postres con frutos secos
+Receta de Panellets de café,45m,baja,80.00%,Otros postres
+Té helado,10m,baja,90.00%,Té
+Receta de Salsa pomarola,1h 30m,baja,80.00%,Salsas rojas
+Receta de Hot dog americano original,10m,baja,100.00%,Salchicha
+Receta de Ensalada de betarraga,45m,baja,80.00%,Ensaladas saludables
+Ponche de almendras,30m,baja,72.00%,Ponche
+Receta de Tortilla de zucchini,15m,baja,66.60%,Calabacín
+Receta de Pasticho de plátano,1h 30m,media,78.20%,Lasaña
+Receta de Polenta italiana,30m,baja,60.00%,Otros cereales
+Receta de Pizza porteña,1h 30m,baja,80.00%,Pizza
+Receta de Medialunas grandes,6h,alta,100.00%,Bollería
+Receta de Medialunas hojaldradas,8h,alta,80.00%,Hojaldre dulce
+Receta de Sopaipillas veganas,30m,baja,86.60%,Otros aperitivos
+Receta de Papas pay,15m,baja,20.00%,Patata
+Terremoto sin alcohol,10m,baja,100.00%,Cócteles
+Receta de Medialunas con tapa de empanadas,15m,baja,100.00%,Bollos
+Receta de Medialunas con tapas de pascualina,15m,baja,65.00%,Bollos
+Receta de Crema diplomata,2h 30m,media,84.00%,Cremas pasteleras
+Receta de Pan caracol,1h 30m,media,100.00%,Pan
+Receta de Galette des rois o pastel de Reyes,1h 30m,media,69.20%,Pasteles
+Receta de Torta pompadour de plátano,1h 30m,media,90.00%,Pasteles
+Receta de Arrollado de malaya,2h 30m,media,60.00%,Vaca
+Receta de Caldo de pata,3h,alta,93.40%,Caldos
+Receta de Torta amor chilena,6h,alta,100.00%,Hojaldre dulce
+Receta de Torta 4 leches,6h,alta,80.00%,Pasteles
