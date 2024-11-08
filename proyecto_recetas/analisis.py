@@ -15,7 +15,7 @@ def graficar():
 
     prd.procesar_datos(df)
 
-    # Configurar estilos
+    # Configurar estiloss
     estilo()
 
     # Mostrar título y filtros
