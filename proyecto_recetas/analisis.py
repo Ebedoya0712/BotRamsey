@@ -1,7 +1,9 @@
+# Importar librerías necesarias
 import pandas as pd
 import os
 import streamlit as st
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import seaborn as sns
 import src.limpieza.procesar_datos as prd
 import json
@@ -31,13 +33,13 @@ def graficar():
     
     # Mostrar gráficos
     graficar_linea(df_filtrado, 'Duracion', 'Dificultad', "Duración vs Dificultad")
-    graficar_linea(df_filtrado, 'Dificultad', 'Valoracion', "Dificultad vs Valoración")
     graficar_linea(df_filtrado, 'Duracion', 'Valoracion', "Duración vs Valoración")
     graficar_barras(df_filtrado, 'Dificultad', "Comparación de Niveles de Dificultad")
-
+    
+    # Graficar dificultad vs valoración sin aplicar filtros adicionales
+    graficar_dificultad_vs_valoracion(df)
 
 def cargar_datos():
-    ### Cargar datos desde archivos CSV y JSON ###
     try:
         with open('proyecto_recetas/data/clasificacion.json', 'r') as f:
             clasificacion = json.load(f)
@@ -53,9 +55,7 @@ def cargar_datos():
     df = pd.read_csv(ruta_csv)
     return clasificacion, df
 
-
 def aplicar_filtros(clasificacion, df):
-    ### Aplicar filtros de dificultad y tipo ###
     dificultad = st.sidebar.selectbox('Selecciona la dificultad', ['todas', 'alta', 'media', 'baja', 'muy baja'])
     tipo = st.sidebar.selectbox('Selecciona Tipo', ['todas'] + list(clasificacion.keys()))
 
@@ -66,9 +66,7 @@ def aplicar_filtros(clasificacion, df):
         df = df[df['Tipo'].isin(clasificacion[tipo])]
     return df
 
-
 def graficar_linea(df, x_col, y_col, titulo):
-    ### gráficos de líneas ###
     if df.empty:
         st.warning(f"No hay datos suficientes para el gráfico: {titulo}")
         return
@@ -77,14 +75,31 @@ def graficar_linea(df, x_col, y_col, titulo):
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.lineplot(data=df, x=x_col, y=y_col, ax=ax)
     ax.set_facecolor('black')
+    # Ajustar el intervalo del eje X a 60 minutos
+    ax.xaxis.set_major_locator(ticker.MultipleLocator(120))
+    ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: f'{int(x // 60)}h {int(x % 60)}m' if (x >= 60) else f'{int(x)}m'))
     plt.title(titulo, fontsize=16, color='white')
     plt.xlabel(x_col, fontsize=14, color='white')
     plt.ylabel(y_col, fontsize=14, color='white')
+    ax.invert_yaxis()
     st.pyplot(fig)
 
+def graficar_dificultad_vs_valoracion(df):
+    if df.empty:
+        st.warning("No hay datos suficientes para el gráfico: Dificultad vs Valoración")
+        return
+
+    st.subheader("Dificultad vs Valoración (Sin Filtro)")
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.lineplot(data=df, x='Dificultad', y='Valoracion', ax=ax)
+    ax.set_facecolor('black')
+
+    plt.title("Dificultad vs Valoración", fontsize=16, color='white')
+    plt.xlabel('Dificultad', fontsize=14, color='white')
+    plt.ylabel('Valoración', fontsize=14, color='white')
+    st.pyplot(fig)
 
 def graficar_barras(df, col, titulo):
-    ### Gráfico de barras para comparación de niveles ###
     if df.empty:
         st.warning("No hay datos suficientes para el gráfico de barras")
         return
@@ -99,9 +114,7 @@ def graficar_barras(df, col, titulo):
     plt.ylabel("Cantidad", fontsize=14, color='white')
     st.pyplot(fig)
 
-
 def estilo():
-    ### Configurar estilos para gráficos ###
     sns.set_style("darkgrid")
     sns.set_palette("bright")
     plt.rcParams.update({
@@ -114,4 +127,3 @@ def estilo():
         'ytick.color': 'white',
         'legend.facecolor': 'black'
     })
-

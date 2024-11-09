@@ -10,6 +10,7 @@ def procesar_minutos(duracion):
         total_minutos += int(horas.group(1)) * 60
     if minutos:
         total_minutos += int(minutos.group(1))
+    
     return total_minutos
 
 
@@ -38,7 +39,6 @@ def limpiar(df):
 
     df = df.dropna()
 
-
     df = df[df['Duracion'] > 0]
 
 
@@ -48,4 +48,3 @@ def limpiar(df):
     df = df[df['Dificultad'].isin(['alta', 'media', 'baja', 'muy baja'])]
 
     return df
-
