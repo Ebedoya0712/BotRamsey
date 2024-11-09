@@ -36,7 +36,6 @@ def procesar_datos(df):
 def limpiar(df):
     df = df.drop_duplicates()
 
-
     df = df.dropna()
 
     df = df[df['Duracion'] > 0]
@@ -48,4 +47,3 @@ def limpiar(df):
     df = df[df['Dificultad'].isin(['alta', 'media', 'baja', 'muy baja'])]
 
     return df
-
