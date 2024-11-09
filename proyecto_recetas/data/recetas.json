@@ -528,5 +528,20 @@
         "Duracion": "6h",
         "Dificultad": "alta",
         "Tipo": "Pasteles"
+    },
+    "Receta de Panquecas": {
+        "ingredientes": [
+            "1 taza de harina común (125 g)",
+            "2 cucharadas soperas de azúcar",
+            "2 cucharadas de postre de polvo de hornear o levadura química",
+            "1 pizca de sal",
+            "1 taza de leche (175 ml)",
+            "2 cucharadas soperas de aceite vegetal o mantequilla sin sal derretida",
+            "1 huevo L"
+        ],
+        "Valoracion": "89.80%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Tortitas"
     }
 }
