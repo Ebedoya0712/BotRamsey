@@ -26,12 +26,17 @@ def obtener_receta(enlace):
     sopa = obtener_contenido(enlace)
     if not sopa:
         return
-
+    
     titulo = sopa.find('h1', class_='titulo titulo--articulo').get_text(strip=True)
     tipo = sopa.find('a', class_='post-categoria-link').get_text(strip=True)
-    valoracion = sopa.find('div', class_='valoracion').get('style', '').split(':')[-1].strip()
+    try:
+        valoracion = sopa.find('div', class_='valoracion').get('style', '').split(':')[-1].strip()
+    except AttributeError:
+        valoracion = "50.00%"
     propiedades = [prop.get_text(strip=True) for prop in sopa.select('div.properties span')]
     ingredientes = [ing.get_text(strip=True) for ing in sopa.select('div.ingredientes label')]
+    
+
 
     guardar_datos(titulo, propiedades, ingredientes, valoracion, tipo)
 
