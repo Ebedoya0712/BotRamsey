@@ -1,6 +1,7 @@
 import streamlit as st
 import analisis
 import src.scraping.scraper as sp  # funciones de scraping de recetas
+import data_usuario as du
 
 
 def main():
@@ -15,6 +16,10 @@ def main():
     if st.button("ver analisis") or st.session_state['analisis']:
         analisis.graficar()
         st.session_state['analisis'] = True
+        st.button("Salir", key="salir")
+    elif st.button("Ver Informacion de usuario") or st.session_state['informacion']:
+        du.generar_ui_usuario()
+        st.session_state['informacion'] = True
         st.button("Salir", key="salir")
     else:   
         cargar_historial(st.session_state.mensajes)  # Cargar historial de chat
@@ -31,7 +36,8 @@ def inicializar_estado():
         'salir': False,
         'cronometro': False,
         'tiempo': 0,
-        'Base': sp.cargar_datos()
+        'Base': sp.cargar_datos(),
+        'informacion': False
     }
     for key, value in defaults.items():
         if key not in st.session_state:
@@ -39,6 +45,7 @@ def inicializar_estado():
     if st.session_state['salir']:
         st.session_state['paso'] = 0
         st.session_state['analisis'] = False
+        st.session_state['informacion'] = False
 
 
 def chat():
