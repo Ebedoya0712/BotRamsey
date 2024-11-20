@@ -125,7 +125,6 @@ def cargar():
     return clasificacion,df
 
 
-
 def estilo():
 # Aplicar el estilo a los graficos
     sns.set_style("darkgrid")

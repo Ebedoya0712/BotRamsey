@@ -26,12 +26,17 @@ def obtener_receta(enlace):
     sopa = obtener_contenido(enlace)
     if not sopa:
         return
-
+    
     titulo = sopa.find('h1', class_='titulo titulo--articulo').get_text(strip=True)
     tipo = sopa.find('a', class_='post-categoria-link').get_text(strip=True)
-    valoracion = sopa.find('div', class_='valoracion').get('style', '').split(':')[-1].strip()
+    try:
+        valoracion = sopa.find('div', class_='valoracion').get('style', '').split(':')[-1].strip()
+    except AttributeError:
+        valoracion = "50.00%"
     propiedades = [prop.get_text(strip=True) for prop in sopa.select('div.properties span')]
     ingredientes = [ing.get_text(strip=True) for ing in sopa.select('div.ingredientes label')]
+    
+
 
     guardar_datos(titulo, propiedades, ingredientes, valoracion, tipo)
 
@@ -123,7 +128,7 @@ def guardar_archivos(Base):
     ### Guarda la base de datos en archivos JSON y CSV ### 
     if Base:
         # Guardar JSON
-        with open('proyecto_recetas/data/recetas.json', 'w') as f:
+        with open('proyecto_recetas/data/recetas.json', 'w', encoding='utf-8') as f:
             json.dump(Base, f, indent=4, ensure_ascii=False)
 
         # Guardar CSV
@@ -134,7 +139,7 @@ def guardar_archivos(Base):
             "Valoracion": [receta['Valoracion'] for receta in Base.values()],
             "Tipo": [receta['Tipo'] for receta in Base.values()]
         }
-        pd.DataFrame(data).to_csv('proyecto_recetas/data/recetas.csv', index=False)
+        pd.DataFrame(data).to_csv('proyecto_recetas/data/recetas.csv', index=False, encoding='utf-8')
 
 
 
@@ -142,6 +147,6 @@ def cargar_datos():
     ### Carga los datos desde el archivo JSON si existe ### 
     path = 'proyecto_recetas/data/recetas.json'
     if os.path.exists(path):
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             return json.load(f)
     return {}

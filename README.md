@@ -47,11 +47,11 @@ Para la recopilación de datos, se utilizará web scraping de sitios de recetas 
 - Funciones que ajusten los tiempos de cocción en tiempo real.
 
 ## Tecnologías y Herramientas Sugeridas
-- **Web Scraping:** Beautiful Soup, Scrapy, Selenium
-- **Análisis de Datos:** Pandas, NLTK, spaCy
+- **Web Scraping:** Beautiful Soup
+- **Análisis de Datos:** Pandas
 - **Machine Learning:** scikit-learn, TensorFlow
 - **Visualización:** Plotly, Seaborn
-- **Interfaz de Usuario:** Streamlit, Flask
+- **Interfaz de Usuario:** Streamlit
 
 ## Conclusión
 Este proyecto tiene el potencial de ofrecer una solución innovadora para personas con agendas ajustadas, facilitando la experiencia culinaria y reduciendo la barrera del tiempo en la cocina. ¡Esperamos que disfrutes usando el bot y descubras nuevas recetas que se adapten a tu estilo de vida!
