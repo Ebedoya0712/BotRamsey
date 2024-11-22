@@ -34,9 +34,6 @@ def main():
     st.set_page_config(page_title="BotRamsey", layout="centered")
     st.title("Bienvenido a BotRamsey")
 
-    # Saludo inicial con voz
-    reproducir_audio("Hola, bienvenido al sistema de Recetas de BotRamsey")
-
     # Inicialización de los estados en la sesión
     inicializar_estado()
     sp.guardar_archivos(st.session_state.Base)  # Guardar archivos actualizados
@@ -64,9 +61,11 @@ def inicializar_estado():
         'salir': False,
         'cronometro': False,
         'tiempo': 0,
-        'Base': sp.cargar_datos(),
         'informacion': False
     }
+    if 'Base' not in st.session_state:
+        st.session_state.Base = sp.cargar_datos()
+        reproducir_audio("Hola, bienvenido al sistema de Recetas de BotRamsey")
     for key, value in defaults.items():
         if key not in st.session_state:
             st.session_state[key] = value
