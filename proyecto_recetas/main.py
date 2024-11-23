@@ -1,41 +1,13 @@
 import streamlit as st
-from gtts import gTTS
-import os
 import analisis
 import src.scraping.scraper as sp  # funciones de scraping de recetas
 import data_usuario as du
-import pygame
 
-def reproducir_audio(texto):
-    archivo_audio = "bienvenida.mp3"
-    
-    # Generar archivo de audio usando gTTS
-    tts = gTTS(text=texto, lang="es")
-    tts.save(archivo_audio)
-    
-    # Inicializar pygame para reproducir el audio
-    pygame.mixer.init()
-    pygame.mixer.music.load(archivo_audio)
-    pygame.mixer.music.play()
-
-    # Esperar a que termine la reproducción
-    while pygame.mixer.music.get_busy():
-        pygame.time.Clock().tick(10)
-    
-    # Cerrar pygame antes de eliminar el archivo
-    pygame.mixer.quit()
-
-    # Eliminar el archivo de audio
-    if os.path.exists(archivo_audio):
-        os.remove(archivo_audio)
 
 def main():
     # Configurar la página de la aplicación con título y diseño centrado
     st.set_page_config(page_title="BotRamsey", layout="centered")
     st.title("Bienvenido a BotRamsey")
-
-    # Saludo inicial con voz
-    reproducir_audio("Hola, bienvenido al sistema de Recetas de BotRamsey")
 
     # Inicialización de los estados en la sesión
     inicializar_estado()
