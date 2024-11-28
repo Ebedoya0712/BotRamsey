@@ -47,12 +47,6 @@ def obtener_receta(enlace):
     st.subheader("Lista De Ingredientes")
     st.write("\n\n".join(ingredientes))
 
-    if st.session_state['voz'] and enlace == st.session_state.mensajes[-1]["content"]:
-        av.reproducir_audio(titulo)
-        av.reproducir_audio("\n".join(propiedades))
-        av.reproducir_audio("Lista De Ingredientes")
-        av.reproducir_audio("\n".join(ingredientes))
-
 
 
 def mostrar_pasos(enlace):
@@ -67,10 +61,6 @@ def mostrar_pasos(enlace):
         st.subheader("Pasos de preparación:")
         paso_actual = pasos[st.session_state.paso]
         st.write(paso_actual + "\n")
-        
-        if st.session_state['voz']:
-            av.reproducir_audio(paso_actual)
-            st.session_state['voz'] = False
 
         if "minuto" in paso_actual:
             tiempo = extraer_minutos(paso_actual)
