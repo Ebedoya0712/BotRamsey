@@ -1,7 +1,7 @@
 import streamlit as st
-import analisis
+import src.Analisis.analisis as analisis
 import src.scraping.scraper as sp  # funciones de scraping de recetas
-import data_usuario as du
+import src.Analisis.data_usuario as du
 
 
 def main():
@@ -36,9 +36,10 @@ def inicializar_estado():
         'salir': False,
         'cronometro': False,
         'tiempo': 0,
-        'Base': sp.cargar_datos(),
         'informacion': False
     }
+    if 'Base' not in st.session_state:
+        st.session_state.Base = sp.cargar_datos()
     for key, value in defaults.items():
         if key not in st.session_state:
             st.session_state[key] = value

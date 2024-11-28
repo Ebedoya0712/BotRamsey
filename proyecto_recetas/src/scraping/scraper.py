@@ -8,6 +8,7 @@ import time
 import json
 import pandas as pd
 import os
+import src.Accesibilidad.AsistenteVoz as av
 
 def obtener_contenido(enlace):
     ### Realiza una solicitud HTTP y devuelve el contenido en formato BeautifulSoup ### 

@@ -30,11 +30,11 @@ def graficar():
 
     st.title("Análisis de Recetas")
 
-    DuracionVs_y(df, "Dificultad")
+    DuracionVsDificultad(df)
 
     DificultadVsValoracion(df)
 
-    DuracionVs_y(df, "Valoracion")
+    DuracionVsValoracion(df)
 
     barrasDificultad(df)
 
@@ -58,15 +58,27 @@ def DificultadVsValoracion(df):
 
 
 
-def DuracionVs_y(df, y):
-    st.subheader(f"Duración vs {y}")
+def DuracionVsDificultad(df):
+    st.subheader(f"Duración vs Dificultad")
     fig, ax = plt.subplots(figsize=(10, 6))
-    sns.lineplot(data=df, x='Duracion', y=y, ax=ax)
+    sns.lineplot(data=df, x='Duracion', y="Dificultad", ax=ax)
     ax.set_facecolor('black')
     formato_tiempo(ax)
-    plt.title(f"Duración vs {y}", fontsize=16, color='white')
+    plt.title(f"Duración vs Dificultad", fontsize=16, color='white')
     plt.xlabel("Duración", fontsize=14, color='white')
-    plt.ylabel(y, fontsize=14, color='white')
+    plt.ylabel("Dificultad", fontsize=14, color='white')
+    ax.invert_yaxis()
+    st.pyplot(fig)
+
+def DuracionVsValoracion(df):
+    st.subheader(f"Duración vs Valoracion")
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.lineplot(data=df, x='Duracion', y="Valoracion", ax=ax)
+    ax.set_facecolor('black')
+    formato_tiempo(ax)
+    plt.title(f"Duración vs Valoracion", fontsize=16, color='white')
+    plt.xlabel("Duración", fontsize=14, color='white')
+    plt.ylabel("Valoracion", fontsize=14, color='white')
     st.pyplot(fig)
 
 
@@ -74,8 +86,8 @@ def DuracionVs_y(df, y):
 def barrasDificultad(df):
     st.subheader("Comparación de Niveles de Dificultad")
     fig, ax = plt.subplots(figsize=(10, 6))
-    nivel_counts = df['Dificultad'].value_counts()
-    nivel_counts.plot(kind='bar', ax=ax)
+    nivel_counts = df["Dificultad"].value_counts(sort= False)
+    sns.barplot(data=nivel_counts, ax=ax)
     ax.set_facecolor('black')
     plt.title("Comparación de Niveles de Dificultad", fontsize=16, color='white')
     plt.xlabel("Nivel de Dificultad", fontsize=14, color='white')
