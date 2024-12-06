@@ -6,3 +6,7 @@ selenium
 scikit-learn
 plotly
 spacy
+matplotlib
+seaborn
+gtts
+pygame
